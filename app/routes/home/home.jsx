@@ -1,15 +1,7 @@
-import gamestackTexture2Large from '~/assets/gamestack-list-large.jpg';
-import gamestackTexture2Placeholder from '~/assets/gamestack-list-placeholder.jpg';
-import gamestackTexture2 from '~/assets/gamestack-list.jpg';
-import gamestackTextureLarge from '~/assets/gamestack-login-large.jpg';
-import gamestackTexturePlaceholder from '~/assets/gamestack-login-placeholder.jpg';
-import gamestackTexture from '~/assets/gamestack-login.jpg';
-import sliceTextureLarge from '~/assets/slice-app-large.jpg';
-import sliceTexturePlaceholder from '~/assets/slice-app-placeholder.jpg';
-import sliceTexture from '~/assets/slice-app.jpg';
-import sprTextureLarge from '~/assets/spr-lesson-builder-dark-large.jpg';
-import sprTexturePlaceholder from '~/assets/spr-lesson-builder-dark-placeholder.jpg';
-import sprTexture from '~/assets/spr-lesson-builder-dark.jpg';
+import fypTexture from '~/assets/fyp.png';
+import summarizerTexture from '~/assets/summarizer.png';
+import careerTexture from '~/assets/career.png';
+import storeTexture from '~/assets/store.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -41,8 +33,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'Designer + Developer',
-    description: `Design portfolio of ${config.name} — a product designer working on web & mobile apps with a focus on motion, experience design, and accessibility.`,
+    title: 'ML Engineer + Data Scientist',
+    description: `Portfolio of ${config.name} — a Machine Learning & AI Engineer specialising in deep learning, NLP, computer vision, and Python-powered data science solutions.`,
   });
 };
 
@@ -53,10 +45,11 @@ export const Home = () => {
   const projectOne = useRef();
   const projectTwo = useRef();
   const projectThree = useRef();
+  const projectFour = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, details];
+    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, details];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -103,19 +96,14 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        title="Designing the future of education"
-        description="Designing a platform to help educators build better online courseware"
-        buttonText="View project"
-        buttonLink="/projects/smart-sparrow"
+        title="Automated Grading & Learning Analytics"
+        description="Intelligent automated grading system using rule-based logic and data analytics to evaluate student performance, reduce manual grading effort, and provide learning insights."
+        buttonText="Live Demo"
+        buttonLink="https://sindhmitty.vercel.app/"
         model={{
-          type: 'laptop',
-          alt: 'Smart Sparrow lesson builder',
-          textures: [
-            {
-              srcSet: `${sprTexture} 1280w, ${sprTextureLarge} 2560w`,
-              placeholder: sprTexturePlaceholder,
-            },
-          ],
+          type: 'screenshot',
+          src: fypTexture,
+          alt: 'Automated Grading Platform screenshot',
         }}
       />
       <ProjectSummary
@@ -124,23 +112,14 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
-        title="Video game progress tracking"
-        description="Design and development for a video game tracking app built in React Native"
-        buttonText="View website"
-        buttonLink="https://gamestack.hamishw.com"
+        title="Intelligent Document Summarizer API"
+        description="AI-powered REST API that summarizes PDF/DOCX/TXT documents, extracts keywords, and answers natural language questions using Groq LLaMA 3.3 70B with offline fallback."
+        buttonText="Live Demo"
+        buttonLink="https://web-production-4811b.up.railway.app/"
         model={{
-          type: 'phone',
-          alt: 'App login screen',
-          textures: [
-            {
-              srcSet: `${gamestackTexture} 375w, ${gamestackTextureLarge} 750w`,
-              placeholder: gamestackTexturePlaceholder,
-            },
-            {
-              srcSet: `${gamestackTexture2} 375w, ${gamestackTexture2Large} 750w`,
-              placeholder: gamestackTexture2Placeholder,
-            },
-          ],
+          type: 'screenshot',
+          src: summarizerTexture,
+          alt: 'Intelligent Document Summarizer screenshot',
         }}
       />
       <ProjectSummary
@@ -148,19 +127,30 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
-        title="Biomedical image collaboration"
-        description="Increasing the amount of collaboration in Slice, an app for biomedical imaging"
-        buttonText="View project"
-        buttonLink="/projects/slice"
+        title="Predicting Students Career Aspirations"
+        description="ML models predicting students' career aspirations from academic and personal data. Random Forest classifier with 80% accuracy, deployed via FastAPI with career recommendations."
+        buttonText="Live Demo"
+        buttonLink="https://studentaspiration.streamlit.app/"
         model={{
-          type: 'laptop',
-          alt: 'Annotating a biomedical image in the Slice app',
-          textures: [
-            {
-              srcSet: `${sliceTexture} 800w, ${sliceTextureLarge} 1920w`,
-              placeholder: sliceTexturePlaceholder,
-            },
-          ],
+          type: 'screenshot',
+          src: careerTexture,
+          alt: 'Career Aspiration Predictor screenshot',
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        alternate
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
+        title="PrimeBrothers E-Commerce Platform"
+        description="Full-stack e-commerce solution with React frontend, Node.js backend, and PayFast payment integration for a seamless online shopping experience."
+        buttonText="Live Demo"
+        buttonLink="https://primebrothers-store.vercel.app/"
+        model={{
+          type: 'screenshot',
+          src: storeTexture,
+          alt: 'PrimeBrothers Store screenshot',
         }}
       />
       <Profile

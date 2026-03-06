@@ -8,18 +8,20 @@ and graphic assets behind this site humanstxt.org.
 
 _______________________________________________________________________________
 
-DESIGNER | デザイナー
+ML & AI ENGINEER | エンジニア
 
-Hamish Williams
-Hand crafted design & web development
+Muhammad Usman
+Machine Learning, AI & Data Science
 
-Design tools:
-Figma
-Photoshop
-Blender
+Core tools:
+Python
+PyTorch
+TensorFlow
+Jupyter
 
-twitter.com/hamishmw
-github.com/hamishmw
+github.com/mhusman123
+linkedin.com/in/muhammad-usman-9464b5247
+x.com/md_usman73
 
 _______________________________________________________________________________
 

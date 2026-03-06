@@ -20,7 +20,7 @@ import styles from './uses.module.css';
 export const meta = () => {
   return baseMeta({
     title: 'Uses',
-    description: 'A list of hardware and software I use to do my thing',
+    description: 'A list of tools, libraries, hardware, and software I use for ML, AI, and data science work',
   });
 };
 
@@ -35,31 +35,38 @@ export const Uses = () => {
         />
         <ProjectHeader
           title="Uses"
-          description="A somewhat comprehensive list of tools, apps, hardware, and more that I use on a daily basis to design and code things. And yeah, that is a Johnny Mnemonic GIF in the background."
+          description="A comprehensive list of tools, libraries, frameworks, and platforms I use daily for machine learning, AI development, and data science work."
         />
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
-              <ProjectSectionHeading>Design</ProjectSectionHeading>
+              <ProjectSectionHeading>ML &amp; AI Frameworks</ProjectSectionHeading>
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    <Link href="https://www.figma.com">Figma</Link> is my primary tool for
-                    UI design these days. Made the switch from Sketch in 2020 and haven’t
-                    looked back. I’ve also created{' '}
-                    <Link href="https://www.figma.com/@hamish">a few plugins</Link> that
-                    you can install.
+                    <Link href="https://pytorch.org/">PyTorch</Link> is my go-to deep
+                    learning framework for building and training neural networks — I use it
+                    for NLP models, classification tasks, and custom architectures.
                   </ListItem>
                   <ListItem>
-                    Any motion graphics I create are created in Adobe After Effects. So
-                    far I haven’t found a non-Adobe product that’s as good. If anyone has
-                    suggestions please <Link href="/contact">message me</Link>.
+                    <Link href="https://www.tensorflow.org/">TensorFlow / Keras</Link> for
+                    rapid prototyping and deploying production-ready models, especially for
+                    image and text classification pipelines.
                   </ListItem>
                   <ListItem>
-                    For any 3D models and video editing I use{' '}
-                    <Link href="https://www.blender.org/">Blender</Link>. Since 2.8 it’s
-                    become way simpler to use and in a lot of ways better than expensive
-                    paid tools like 3DS Max or Maya.
+                    <Link href="https://scikit-learn.org/">Scikit-learn</Link> is my
+                    standard toolkit for classical ML — random forests, SVMs, logistic
+                    regression, clustering, and preprocessing pipelines.
+                  </ListItem>
+                  <ListItem>
+                    <Link href="https://xgboost.readthedocs.io/">XGBoost</Link> for
+                    gradient boosting on tabular data, particularly useful in financial
+                    risk forecasting and disease prediction models.
+                  </ListItem>
+                  <ListItem>
+                    <Link href="https://huggingface.co/">HuggingFace Transformers</Link>{' '}
+                    for fine-tuning pre-trained language models on domain-specific NLP
+                    tasks such as summarisation and sentiment analysis.
                   </ListItem>
                 </List>
               </ProjectSectionText>
@@ -69,45 +76,106 @@ export const Uses = () => {
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow width="m">
-              <ProjectSectionHeading>Development</ProjectSectionHeading>
+              <ProjectSectionHeading>Data Science &amp; Visualisation</ProjectSectionHeading>
               <ProjectSectionText as="div">
                 <List>
                   <ListItem>
-                    I use <Link href="https://vscodium.com/">VSCodium</Link> as my text
-                    editor, with the Tokyo Night theme and Operator Mono as my typeface of
-                    choice.
+                    <Link href="https://pandas.pydata.org/">Pandas</Link> and{' '}
+                    <Link href="https://numpy.org/">NumPy</Link> form the backbone of every
+                    data pipeline I build — from cleaning and transforming raw datasets to
+                    feature engineering at scale.
                   </ListItem>
                   <ListItem>
-                    Firefox is my main browser for both development and general use.
+                    <Link href="https://matplotlib.org/">Matplotlib</Link> and{' '}
+                    <Link href="https://seaborn.pydata.org/">Seaborn</Link> for
+                    exploratory data analysis, statistical plots, and presenting insights
+                    in research papers and reports.
                   </ListItem>
                   <ListItem>
-                    <Link href="https://reactjs.org/">React</Link> is my front end
-                    Javascript library of choice. The component-centric mental model is
-                    the first thing that truly made sense to me as a designer.
+                    <Link href="https://plotly.com/">Plotly</Link> and{' '}
+                    <Link href="https://streamlit.io/">Streamlit</Link> for building
+                    interactive dashboards and deploying data apps quickly — my career
+                    aspirations predictor is live on Streamlit Cloud.
                   </ListItem>
                   <ListItem>
-                    For 3D effects and image shaders I use{' '}
-                    <Link href="https://threejs.org/">three.js</Link>. It has a bit of a
-                    learning curve but you can do some really powerful stuff with it.
+                    Power BI and Tableau for business intelligence reporting and
+                    creating executive-level dashboards from structured datasets.
+                  </ListItem>
+                </List>
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow width="m">
+              <ProjectSectionHeading>Development &amp; APIs</ProjectSectionHeading>
+              <ProjectSectionText as="div">
+                <List>
+                  <ListItem>
+                    <Link href="https://code.visualstudio.com/">VS Code</Link> is my
+                    primary editor. I rely heavily on the Python, Pylance, Jupyter, and
+                    GitLens extensions for day-to-day ML development.
                   </ListItem>
                   <ListItem>
-                    For CSS I’ve used a myriad pre-processors and css-in-js solutions like
-                    styled-components, but these days I’m using vanilla CSS with{' '}
-                    <Link href="https://postcss.org/">PostCSS</Link> to get upcoming CSS
-                    features today.
+                    <Link href="https://jupyter.org/">Jupyter Notebooks</Link> for
+                    iterative experimentation, EDA, and sharing reproducible research
+                    — every ML project starts in a notebook before moving to a module
+                    structure.
                   </ListItem>
                   <ListItem>
-                    For Javascript animations I use{' '}
-                    <Link href="https://www.framer.com/motion/">Framer Motion</Link>, it’s
-                    a great way to add spring animations to React and three.js.
+                    <Link href="https://fastapi.tiangolo.com/">FastAPI</Link> is my
+                    preferred framework for wrapping ML models into production REST APIs
+                    — fast, async-friendly, and auto-generates OpenAPI docs.
                   </ListItem>
                   <ListItem>
-                    For building and testing UI components in isolation I use{' '}
-                    <Link href="https://storybook.js.org/">Storybook</Link>. Check out the{' '}
-                    <Link href="https://storybook.hamishw.com">
-                      storybook for this website
-                    </Link>
-                    .
+                    <Link href="https://flask.palletsprojects.com/">Flask</Link> and{' '}
+                    <Link href="https://www.djangoproject.com/">Django</Link> for
+                    lightweight APIs and full-stack web apps respectively, including the
+                    document summariser backend.
+                  </ListItem>
+                  <ListItem>
+                    Git and GitHub for version control, collaborative development,
+                    and CI/CD pipelines across all projects.
+                  </ListItem>
+                </List>
+              </ProjectSectionText>
+            </ProjectTextRow>
+          </ProjectSectionContent>
+        </ProjectSection>
+        <ProjectSection padding="none" className={styles.section}>
+          <ProjectSectionContent>
+            <ProjectTextRow width="m">
+              <ProjectSectionHeading>Currently Exploring</ProjectSectionHeading>
+              <ProjectSectionText as="div">
+                <List>
+                  <ListItem>
+                    <Link href="https://en.wikipedia.org/wiki/Computer_vision">Computer Vision</Link>{' '}
+                    with OpenCV, YOLO, and CNN-based architectures for object detection,
+                    image segmentation, and super-resolution — building on the deep learning
+                    work from my third internship.
+                  </ListItem>
+                  <ListItem>
+                    <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">Retrieval-Augmented Generation (RAG)</Link>{' '}
+                    systems that pair large language models with vector stores (FAISS,
+                    Pinecone) to build context-aware, knowledge-grounded AI applications.
+                  </ListItem>
+                  <ListItem>
+                    LLM fine-tuning using{' '}
+                    <Link href="https://huggingface.co/docs/peft">HuggingFace PEFT / LoRA</Link>{' '}
+                    to adapt foundation models to domain-specific tasks efficiently and
+                    at low cost.
+                  </ListItem>
+                  <ListItem>
+                    Advanced Deep Learning — Transformers, diffusion models, and
+                    multi-modal architectures — through hands-on projects and the
+                    fast.ai and DeepLearning.AI curriculum.
+                  </ListItem>
+                  <ListItem>
+                    MLOps practices: experiment tracking with{' '}
+                    <Link href="https://mlflow.org/">MLflow</Link>, containerisation with
+                    Docker, and CI/CD pipelines to move models from notebook to production
+                    reliably and reproducibly.
                   </ListItem>
                 </List>
               </ProjectSectionText>
@@ -117,44 +185,40 @@ export const Uses = () => {
         <ProjectSection padding="none" className={styles.section}>
           <ProjectSectionContent>
             <ProjectTextRow stretch width="m">
-              <ProjectSectionHeading>System</ProjectSectionHeading>
+              <ProjectSectionHeading>Languages &amp; Stack</ProjectSectionHeading>
               <Table>
                 <TableBody>
                   <TableRow>
-                    <TableHeadCell>Desktop</TableHeadCell>
-                    <TableCell>Custom built</TableCell>
+                    <TableHeadCell>Primary Language</TableHeadCell>
+                    <TableCell>Python</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Operating system</TableHeadCell>
-                    <TableCell>Arch Linux (by the way)</TableCell>
+                    <TableHeadCell>Other Languages</TableHeadCell>
+                    <TableCell>SQL, Java, JavaScript, React, Node.js</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Browser</TableHeadCell>
-                    <TableCell>Zen Browser</TableCell>
+                    <TableHeadCell>Relational Databases</TableHeadCell>
+                    <TableCell>MySQL, PostgreSQL, SQLite</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Monitor</TableHeadCell>
-                    <TableCell>1440p IPS 144hz LG 27GL850</TableCell>
+                    <TableHeadCell>NoSQL</TableHeadCell>
+                    <TableCell>MongoDB</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Keyboard</TableHeadCell>
-                    <TableCell>Tofu65</TableCell>
+                    <TableHeadCell>Cloud</TableHeadCell>
+                    <TableCell>AWS, Azure (fundamentals)</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Mouse</TableHeadCell>
-                    <TableCell>Logitech G403</TableCell>
+                    <TableHeadCell>Education</TableHeadCell>
+                    <TableCell>BSc Computer Science — University of Sindh (Dec 2025)</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Laptop</TableHeadCell>
-                    <TableCell>Macbook Pro 14″</TableCell>
+                    <TableHeadCell>Experience</TableHeadCell>
+                    <TableCell>3x Intern (ML, Data Science, AI/DL) at <Link href="https://itsolera.com/">ITSOLERA PVT LTD</Link></TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableHeadCell>Headphones</TableHeadCell>
-                    <TableCell>Audio Technica ATH-M50x/Apple Airpods</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableHeadCell>Microphone</TableHeadCell>
-                    <TableCell>Blue Yeti</TableCell>
+                    <TableHeadCell>Operating System</TableHeadCell>
+                    <TableCell>Windows 11</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

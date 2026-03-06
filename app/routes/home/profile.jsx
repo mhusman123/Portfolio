@@ -1,17 +1,11 @@
-import profileImgLarge from '~/assets/profile-large.jpg';
-import profileImgPlaceholder from '~/assets/profile-placeholder.jpg';
-import profileImg from '~/assets/profile.jpg';
 import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
-import { Divider } from '~/components/divider';
 import { Heading } from '~/components/heading';
-import { Image } from '~/components/image';
 import { Link } from '~/components/link';
 import { Section } from '~/components/section';
 import { Text } from '~/components/text';
 import { Transition } from '~/components/transition';
 import { Fragment, useState } from 'react';
-import { media } from '~/utils/style';
 import katakana from './katakana.svg';
 import styles from './profile.module.css';
 
@@ -21,16 +15,40 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I’m Hamish, currently I live in Sydney working as a senior product designer at{' '}
-      <Link href="https://www.qwilr.com">Qwilr</Link>. My projects include UX design, UI
-      animations, and icon illustration. Being comfortable with code allows me to rapidly
-      prototype and validate experiences. If you’re interested in the tools and software I
-      use check out my <Link href="/uses">uses page</Link>.
+      I'm Muhammad Usman, a Machine Learning Engineer and AI Developer with hands-on
+      experience building, training, and deploying intelligent systems. I specialise in
+      Python, Scikit-learn, TensorFlow, and PyTorch — turning raw data into production-ready
+      AI solutions. I graduated with a Bachelor of Computer Science from the University of
+      Sindh in December 2025.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      In my spare time I like to practice Brazilian Jiu Jitsu, play video games, and{' '}
-      <Link href="/projects/volkihar-knight">make mods</Link>. I’m always down for hearing
-      about new projects, so feel free to drop me a line.
+      I have completed three internships at{' '}
+      <Link href="https://itsolera.com/">ITSOLERA PVT LTD</Link> across Machine Learning,
+      Data Science, and Artificial Intelligence. My first two internships focused on
+      building models for sentiment analysis, disease prediction, anomaly detection, and
+      financial risk forecasting, and wrapping those models in production APIs using FastAPI
+      and Flask. My third internship (July – October 2024) concentrated on Deep Learning —
+      as part of a team I contributed data collection and preprocessing pipelines to four
+      projects: an AI-Powered Interactive Learning Platform, a Super-Resolution Imaging
+      system, an Augmented Reality Try-On experience, and a Smart Parking System with
+      real-time space detection. Balancing all three internships alongside university studies
+      sharpened my time management and collaborative problem-solving skills. Check out the
+      tools I work with on my <Link href="/uses">uses page</Link>.
+    </Text>
+    <Text className={styles.description} data-visible={visible} size="l" as="p">
+      Beyond production work, I am actively deepening my expertise in several cutting-edge
+      areas of AI. I am currently building projects with{' '}
+      <Link href="https://pytorch.org/">Deep Learning</Link> architectures — CNNs, RNNs,
+      and Transformers — and exploring{' '}
+      <Link href="https://en.wikipedia.org/wiki/Computer_vision">Computer Vision</Link>{' '}
+      pipelines for object detection, image segmentation, and super-resolution using
+      OpenCV and YOLO. I am also working with{' '}
+      <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">Retrieval-Augmented Generation (RAG)</Link>{' '}
+      systems, combining large language models with vector databases such as FAISS and
+      Pinecone to build context-aware AI applications. Additionally, I am experimenting
+      with LLM fine-tuning via HuggingFace PEFT/LoRA and developing end-to-end MLOps
+      pipelines using tools like MLflow and Docker to bring models from experiment to
+      production reliably.
     </Text>
   </Fragment>
 );
@@ -66,32 +84,6 @@ export const Profile = ({ id, visible, sectionRef }) => {
               </Button>
             </div>
             <div className={styles.column}>
-              <div className={styles.tag} aria-hidden>
-                <Divider
-                  notchWidth="64px"
-                  notchHeight="8px"
-                  collapsed={!visible}
-                  collapseDelay={1000}
-                />
-                <div className={styles.tagText} data-visible={visible}>
-                  About me
-                </div>
-              </div>
-              <div className={styles.image}>
-                <Image
-                  reveal
-                  delay={100}
-                  placeholder={profileImgPlaceholder}
-                  srcSet={`${profileImg} 480w, ${profileImgLarge} 960w`}
-                  width={960}
-                  height={1280}
-                  sizes={`(max-width: ${media.mobile}px) 100vw, 480px`}
-                  alt="Me smiling like a goofball at the Qwilr office in Sydney"
-                />
-                <svg className={styles.svg} data-visible={visible} viewBox="0 0 136 766">
-                  <use href={`${katakana}#katakana-profile`} />
-                </svg>
-              </div>
             </div>
           </div>
         )}

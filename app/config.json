@@ -1,11 +1,12 @@
 {
-  "name": "Hamish Williams",
-  "role": "Designer",
-  "disciplines": ["Developer", "Prototyper", "Animator", "Illustrator", "Modder"],
-  "url": "https://hamishw.com",
-  "bluesky": "hamishw.com",
-  "figma": "@Hamish",
-  "github": "HamishMW",
-  "repo": "https://github.com/HamishMW/portfolio",
+  "name": "Muhammad Usman",
+  "role": "ML Engineer",
+  "disciplines": ["AI Engineer", "Data Scientist", "Python Developer", "Frontend Developer"],
+  "url": "https://github.com/mhusman123",
+  "email": "musmanmahar5312@gmail.com",
+  "github": "mhusman123",
+  "linkedin": "muhammad-usman-9464b5247",
+  "twitter": "md_usman73",
+  "repo": "https://github.com/mhusman123",
   "ascii": "__  __  __\n\u005C \u005C \u005C \u005C \u005C\u2215\n \u005C \u005C\u2215\u005C \u005C\n  \u005C\u2215  \u005C\u2215\n"
 }

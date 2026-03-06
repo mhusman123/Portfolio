@@ -5,8 +5,10 @@ import { Footer } from '~/components/footer';
 import { Heading } from '~/components/heading';
 import { Icon } from '~/components/icon';
 import { Input } from '~/components/input';
+import { Link } from '~/components/link';
 import { Section } from '~/components/section';
 import { Text } from '~/components/text';
+import config from '~/config.json';
 import { tokens } from '~/components/theme-provider/theme';
 import { Transition } from '~/components/transition';
 import { useFormInput } from '~/hooks';
@@ -22,7 +24,7 @@ export const meta = () => {
   return baseMeta({
     title: 'Contact',
     description:
-      'Send me a message if you’re interested in discussing a project or if you just want to say hi',
+      'Send me a message if you’re interested in discussing a project or if you just want to say hi. Email: musmanmahar5312@gmail.com',
   });
 };
 
@@ -121,6 +123,16 @@ export const Contact = () => {
             >
               <DecoderText text="Say hello" start={status !== 'exited'} delay={300} />
             </Heading>
+            <Text
+              className={styles.input}
+              data-status={status}
+              size="l"
+              as="p"
+              style={getDelay(tokens.base.durationXS, initDelay, 0.35)}
+            >
+              Or email me directly at{' '}
+              <Link href={`mailto:${config.email}`}>{config.email}</Link>
+            </Text>
             <Divider
               className={styles.divider}
               data-status={status}

@@ -90,7 +90,13 @@ export function ProjectSummary({
           {description}
         </Text>
         <div className={styles.button} data-visible={visible}>
-          <Button iconHoverShift href={buttonLink} iconEnd="arrow-right">
+          <Button
+            iconHoverShift
+            href={buttonLink}
+            iconEnd="arrow-right"
+            target={buttonLink.startsWith('http') ? '_blank' : undefined}
+            rel={buttonLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+          >
             {buttonText}
           </Button>
         </div>
@@ -101,6 +107,16 @@ export function ProjectSummary({
   function renderPreview(visible) {
     return (
       <div className={styles.preview}>
+        {model.type === 'screenshot' && (
+          <div className={styles.screenshotWrapper} data-visible={visible}>
+            <img
+              className={styles.screenshot}
+              src={model.src}
+              alt={model.alt}
+              loading="lazy"
+            />
+          </div>
+        )}
         {model.type === 'laptop' && (
           <>
             {renderKatakana('laptop', visible)}
