@@ -6,6 +6,6 @@ addons.setConfig({
     ...themes.dark,
     brandImage: './icon.svg',
     brandTitle: 'Muhammad Usman Components',
-    brandUrl: 'https://hamishw.com',
+    brandUrl: 'https://github.com/mhusman123/Portfolio',
   },
 });

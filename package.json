@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
-  "homepage": "https://hamishw.com",
+  "homepage": "https://github.com/mhusman123/Portfolio",
   "description": "Portfolio site for Muhammad Usman",
-  "repository": "https://github.com/HamishMW/portfolio.git",
+  "repository": "https://github.com/mhusman123/Portfolio.git",
   "author": "Muhammad Usman",
   "sideEffects": false,
   "type": "module",
