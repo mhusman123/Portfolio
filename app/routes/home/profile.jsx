@@ -15,45 +15,46 @@ const ProfileText = ({ visible, titleId }) => (
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      I&apos;m Muhammad Usman — a <strong>Machine Learning Engineer</strong>,{' '}
-      <strong>AI Engineer</strong>, and <strong>Data Scientist</strong> with a
-      Bachelor of Computer Science from the University of Sindh (February 2026).
-      I design, train, and deploy intelligent systems that solve real-world problems
-      — from classical ML pipelines to deep learning architectures and LLM-powered
-      applications. Check out the tools I use daily on my{' '}
+      I&apos;m <strong>Muhammad Usman</strong> — a fresh{' '}
+      <strong>Machine Learning Engineer</strong> and <strong>AI Engineer</strong>{' '}
+      who graduated with a Bachelor of Science in Computer Science from the{' '}
+      <strong>University of Sindh, Jamshoro</strong> in February 2026. During my
+      degree and three back-to-back internships at{' '}
+      <Link href="https://itsolera.com/">ITSOLERA PVT LTD</Link>, I gained
+      hands-on experience designing, training, and deploying intelligent systems —
+      from classical ML pipelines to deep learning models and LLM-powered
+      applications. Take a look at the tools I work with on my{' '}
       <Link href="/uses">uses page</Link>.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      <strong>Core skills &amp; stack:</strong> Python is my primary language across
-      every stage of the ML lifecycle. For model development I work with{' '}
-      <strong>Scikit-learn</strong>, <strong>TensorFlow / Keras</strong>, and{' '}
-      <strong>PyTorch</strong>. I serve models and build data-driven REST APIs with{' '}
-      <strong>FastAPI</strong> and Flask, containerise everything with{' '}
-      <strong>Docker</strong>, and am actively learning cloud deployment on{' '}
-      <strong>AWS</strong> (EC2, S3, Lambda, SageMaker). For data work I use Pandas,
-      NumPy, Matplotlib, Seaborn, and Plotly. I version experiments with{' '}
-      <strong>MLflow</strong>, manage environments with Conda and Poetry, and use
-      Git for all source control.
+      <strong>Core stack:</strong> Python is my primary language across the full ML
+      lifecycle. I build and train models with <strong>Scikit-learn</strong>,{' '}
+      <strong>TensorFlow / Keras</strong>, and <strong>PyTorch</strong>, serve them
+      as REST APIs using <strong>FastAPI</strong> and Flask, and package everything
+      with <strong>Docker</strong>. For data analysis and visualisation I rely on
+      Pandas, NumPy, Matplotlib, Seaborn, and Plotly. I track experiments with{' '}
+      <strong>MLflow</strong>, manage environments with Conda, and keep all work
+      version-controlled with Git. I am actively expanding my cloud skills on{' '}
+      <strong>AWS</strong> (EC2, S3, Lambda, SageMaker).
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      <strong>Fields I specialise in:</strong> Supervised &amp; unsupervised learning,
+      <strong>What I specialise in:</strong> Supervised &amp; unsupervised learning,
       Natural Language Processing, Computer Vision, Time-Series forecasting,
       end-to-end MLOps pipelines, and REST API development for ML products. I enjoy
-      bridging the gap between research-quality models and production-grade systems.
+      bridging the gap between research-quality models and production-ready systems
+      that genuinely help people.
     </Text>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
-      <strong>What I&apos;m learning next:</strong> I am currently going deeper on{' '}
-      <strong>Large Language Models</strong> — fine-tuning with HuggingFace PEFT /
-      LoRA, building{' '}
+      <strong>Currently learning:</strong> Fine-tuning{' '}
+      <strong>Large Language Models</strong> with HuggingFace PEFT / LoRA, building{' '}
       <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">
         Retrieval-Augmented Generation (RAG)
       </Link>{' '}
-      systems with FAISS and Pinecone, and integrating LLM APIs (Gemini, Groq) into
-      production applications. On the infrastructure side I am expanding into{' '}
-      <strong>AWS SageMaker</strong> for managed model training and deployment, and
-      building automated CI/CD pipelines for ML using GitHub Actions and Docker
-      Compose. I am also exploring <strong>Computer Vision</strong> with YOLO and
-      OpenCV for real-time detection tasks.
+      pipelines with FAISS and Pinecone, and integrating LLM APIs (Gemini, Groq)
+      into real applications. On the infrastructure side I am deepening my knowledge
+      of <strong>AWS SageMaker</strong> for managed training and deployment, setting
+      up CI/CD pipelines for ML with GitHub Actions and Docker Compose, and
+      exploring real-time <strong>Computer Vision</strong> with YOLO and OpenCV.
     </Text>
   </Fragment>
 );
