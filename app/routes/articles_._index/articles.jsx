@@ -162,7 +162,7 @@ export function Articles() {
     </div>
   );
 
-  const featuredPost = <ArticlesPost {...featured} />;
+  const featuredPost = featured ? <ArticlesPost {...featured} /> : null;
 
   return (
     <article className={styles.articles}>

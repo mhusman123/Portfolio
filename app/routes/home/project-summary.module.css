@@ -299,3 +299,116 @@
     opacity: 1;
   }
 }
+
+.detailsButton {
+  margin-left: var(--spaceM);
+}
+
+.moreDetailsToggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--spaceM);
+  margin-left: var(--spaceM);
+  background: none;
+  border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+  border-radius: 4px;
+  color: var(--primary);
+  font-size: var(--fontSizeBodyS);
+  font-weight: var(--fontWeightMedium);
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: background 200ms ease, border-color 200ms ease;
+  letter-spacing: 0.04em;
+
+  &:hover {
+    background: color-mix(in srgb, var(--primary) 10%, transparent);
+    border-color: var(--primary);
+  }
+}
+
+.moreDetailsArrow {
+  display: inline-block;
+  transition: transform 250ms ease;
+
+  &[data-expanded='true'] {
+    transform: rotate(180deg);
+  }
+}
+
+.expandedDetails {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 500ms ease, opacity 400ms ease, margin-top 300ms ease;
+  margin-top: 0;
+
+  &[data-visible='true'] {
+    max-height: 800px;
+    opacity: 1;
+    margin-top: var(--spaceL);
+  }
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spaceM) var(--spaceL);
+  margin-bottom: var(--spaceL);
+
+  @media (--mediaMobile) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detailsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailsLabel {
+  font-size: var(--fontSizeBodyXS);
+  font-weight: var(--fontWeightMedium);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.detailsText {
+  font-size: var(--fontSizeBodyS);
+  color: var(--textBody);
+  line-height: 1.6;
+}
+
+.detailsSection {
+  margin-bottom: var(--spaceL);
+}
+
+.detailsSectionTitle {
+  font-size: var(--fontSizeBodyS);
+  font-weight: var(--fontWeightMedium);
+  color: var(--textTitle);
+  margin-bottom: var(--spaceS);
+  padding-bottom: var(--spaceXS);
+  border-bottom: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spaceXS);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tag {
+  font-size: var(--fontSizeBodyXS);
+  font-weight: var(--fontWeightMedium);
+  padding: 3px 10px;
+  border-radius: 100px;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  color: var(--primary);
+  letter-spacing: 0.04em;
+}

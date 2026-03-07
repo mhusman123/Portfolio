@@ -78,7 +78,6 @@
 }
 
 .tag {
-  margin-top: 220px;
   margin-bottom: 40px;
   display: grid;
   grid-template-columns: var(--space4XL) 1fr;
@@ -133,11 +132,17 @@
 }
 
 .button {
+  margin-top: var(--spaceM);
   opacity: 0;
   transition: opacity var(--durationXL) ease var(--durationL);
 
   &[data-visible='true'] {
     transform: none;
     opacity: 1;
+  }
+
+  @media (--mediaMobile) {
+    width: 100%;
+    justify-content: center;
   }
 }

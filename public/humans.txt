@@ -1,14 +1,15 @@
-__  __  __
-\ \ \ \ \/
- \ \/\ \
-  \/  \/
+ _   _  ____  __  __     _      _   _
+| | | |/ ___||  \/  |   / \    | \ | |
+| | | |\___ \| |\/| |  / _ \   |  \| |
+| |_| | ___) | |  | | / ___ \  | |\  |
+ \___/ |____/|_|  |_|/_/   \_\ |_| \_|
 
 The humans.txt file explains the team, technology,
 and graphic assets behind this site humanstxt.org.
 
 _______________________________________________________________________________
 
-ML & AI ENGINEER | エンジニア
+ML & AI ENGINEER
 
 Muhammad Usman
 Machine Learning, AI & Data Science
@@ -25,7 +26,7 @@ x.com/md_usman73
 
 _______________________________________________________________________________
 
-TECHNOLOGY | テクノロジー
+TECHNOLOGY
 
 React
 Remix
@@ -34,7 +35,7 @@ Framer Motion
 
 _______________________________________________________________________________
 
-FONTS | フォント
+FONTS
 
 Gotham
 IPA Gothic Regular

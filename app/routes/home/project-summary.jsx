@@ -25,6 +25,7 @@ export function ProjectSummary({
   index,
   title,
   description,
+  detailsLink,
   model,
   buttonText,
   buttonLink,
@@ -99,6 +100,11 @@ export function ProjectSummary({
           >
             {buttonText}
           </Button>
+          {detailsLink && (
+            <Button secondary iconHoverShift href={detailsLink} iconEnd="chevron-right" className={styles.detailsButton}>
+              More details
+            </Button>
+          )}
         </div>
       </div>
     );
