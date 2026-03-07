@@ -216,10 +216,6 @@ export const Uses = () => {
                     <TableHeadCell>Experience</TableHeadCell>
                     <TableCell>3x Intern (ML, Data Science, AI/DL) at <Link href="https://itsolera.com/">ITSOLERA PVT LTD</Link></TableCell>
                   </TableRow>
-                  <TableRow>
-                    <TableHeadCell>Operating System</TableHeadCell>
-                    <TableCell>Windows 11</TableCell>
-                  </TableRow>
                 </TableBody>
               </Table>
             </ProjectTextRow>
