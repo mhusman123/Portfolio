@@ -1,3 +1,61 @@
 .home {
   overflow-x: hidden;
 }
+
+.categoryHeader {
+  width: 100%;
+  max-width: var(--maxWidthL);
+  margin: 100px auto 20px;
+  padding: 0 var(--spaceXL);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  z-index: var(--zIndex1);
+
+  @media (--mediaTablet) {
+    padding: 0 var(--spaceL);
+    margin: 60px auto 10px;
+  }
+}
+
+.categoryBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fontSizeBodyXS);
+  font-weight: var(--fontWeightMedium);
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--primary) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 25%, transparent);
+  margin-bottom: var(--spaceM);
+}
+
+.categoryDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--primary);
+  box-shadow: 0 0 8px var(--primary);
+}
+
+.categoryTitle {
+  font-size: var(--fontSizeH3);
+  font-weight: var(--fontWeightMedium);
+  color: var(--textTitle);
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--spaceS) 0;
+  line-height: 1.2;
+}
+
+.categorySubtitle {
+  font-size: var(--fontSizeBodyM);
+  color: var(--textLight);
+  max-width: 680px;
+  margin: 0;
+  line-height: 1.6;
+}

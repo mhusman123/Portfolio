@@ -29,6 +29,10 @@ export function ProjectSummary({
   model,
   buttonText,
   buttonLink,
+  repoLink,
+  category,
+  tags,
+  metrics,
   alternate,
   ...rest
 }) {
@@ -74,9 +78,16 @@ export function ProjectSummary({
             collapsed={!visible}
             collapseDelay={1000}
           />
-          <span className={styles.indexNumber} data-visible={visible}>
-            {indexText}
-          </span>
+          <div className={styles.indexMeta}>
+            <span className={styles.indexNumber} data-visible={visible}>
+              {indexText}
+            </span>
+            {category && (
+              <span className={styles.categoryBadge} data-visible={visible}>
+                {category}
+              </span>
+            )}
+          </div>
         </div>
         <Heading
           level={3}
@@ -87,9 +98,27 @@ export function ProjectSummary({
         >
           {title}
         </Heading>
+        {metrics && metrics.length > 0 && (
+          <div className={styles.metricsList} data-visible={visible}>
+            {metrics.map((metric, i) => (
+              <span key={i} className={styles.metricBadge}>
+                {metric}
+              </span>
+            ))}
+          </div>
+        )}
         <Text className={styles.description} data-visible={visible} as="p">
           {description}
         </Text>
+        {tags && tags.length > 0 && (
+          <div className={styles.tagList} data-visible={visible}>
+            {tags.map((tag, i) => (
+              <span key={i} className={styles.tag}>
+                {tag}
+              </span>
+            ))}
+          </div>
+        )}
         <div className={styles.button} data-visible={visible}>
           <Button
             iconHoverShift
@@ -100,6 +129,18 @@ export function ProjectSummary({
           >
             {buttonText}
           </Button>
+          {repoLink && (
+            <Button
+              secondary
+              href={repoLink}
+              icon="github"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.repoButton}
+            >
+              View Code
+            </Button>
+          )}
           {detailsLink && (
             <Button secondary iconHoverShift href={detailsLink} iconEnd="chevron-right" className={styles.detailsButton}>
               More details

@@ -93,15 +93,29 @@ export const Home = () => {
         sectionRef={intro}
         scrollIndicatorHidden={scrollIndicatorHidden}
       />
+      <div className={styles.categoryHeader} id="ai-projects">
+        <div className={styles.categoryBadge}>
+          <span className={styles.categoryDot} />
+          <span>01 / AI &amp; Machine Learning Projects</span>
+        </div>
+        <h2 className={styles.categoryTitle}>Artificial Intelligence &amp; Machine Learning</h2>
+        <p className={styles.categorySubtitle}>
+          Applied machine learning systems, deep learning pipelines, generative AI solutions, and automated analytics.
+        </p>
+      </div>
       <ProjectSummary
         id="project-1"
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
+        category="AI & Analytics"
+        metrics={['Rule-Based Logic', 'Analytics Engine', 'Automated Grading']}
+        tags={['Python', 'FastAPI', 'Next.js', 'PostgreSQL', 'Data Analytics']}
         title="Automated Grading & Learning Analytics"
         description="Intelligent automated grading system using rule-based logic and data analytics to evaluate student performance, reduce manual grading effort, and provide learning insights."
         buttonText="Live Demo"
         buttonLink="https://sindhmitty.vercel.app/"
+        repoLink="https://github.com/mhusman123"
         detailsLink="/projects/fyp"
         model={{
           type: 'screenshot',
@@ -115,10 +129,14 @@ export const Home = () => {
         sectionRef={projectTwo}
         visible={visibleSections.includes(projectTwo.current)}
         index={2}
+        category="LLM & GenAI"
+        metrics={['Groq LLaMA 3.3 70B', 'Multi-Format (PDF/DOCX)', 'FastAPI REST']}
+        tags={['Groq API', 'LLaMA 3.3', 'FastAPI', 'NLP', 'Python', 'Railway']}
         title="Intelligent Document Summarizer API"
         description="AI-powered REST API that summarizes PDF/DOCX/TXT documents, extracts keywords, and answers natural language questions using Groq LLaMA 3.3 70B with offline fallback."
         buttonText="Live Demo"
         buttonLink="https://web-production-4811b.up.railway.app/"
+        repoLink="https://github.com/mhusman123"
         detailsLink="/projects/summarizer"
         model={{
           type: 'screenshot',
@@ -131,10 +149,14 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
+        category="Machine Learning"
+        metrics={['80% Test Accuracy', 'Random Forest Classifier', 'Streamlit UI']}
+        tags={['Scikit-Learn', 'FastAPI', 'Streamlit', 'Pandas', 'EDA', 'Python']}
         title="Predicting Students Career Aspirations"
         description="ML models predicting students' career aspirations from academic and personal data. Random Forest classifier with 80% accuracy, deployed via FastAPI with career recommendations."
         buttonText="Live Demo"
         buttonLink="https://studentaspiration.streamlit.app/"
+        repoLink="https://github.com/mhusman123"
         detailsLink="/projects/career"
         model={{
           type: 'screenshot',
@@ -142,16 +164,30 @@ export const Home = () => {
           alt: 'Career Aspiration Predictor screenshot',
         }}
       />
+      <div className={styles.categoryHeader} id="web-projects">
+        <div className={styles.categoryBadge}>
+          <span className={styles.categoryDot} />
+          <span>02 / Full-Stack &amp; Web Applications</span>
+        </div>
+        <h2 className={styles.categoryTitle}>Full-Stack &amp; Web Applications</h2>
+        <p className={styles.categorySubtitle}>
+          Modern responsive web applications, secure payment gateways, and scalable REST backends.
+        </p>
+      </div>
       <ProjectSummary
         id="project-4"
         alternate
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
+        category="Full-Stack Web App"
+        metrics={['PayFast Gateway', 'MERN Architecture', 'Responsive UI']}
+        tags={['React', 'Node.js', 'Express', 'MongoDB', 'PayFast', 'REST API']}
         title="PrimeBrothers E-Commerce Platform"
         description="Full-stack e-commerce solution with React frontend, Node.js backend, and PayFast payment integration for a seamless online shopping experience."
         buttonText="Live Demo"
         buttonLink="https://primebrothers-store.vercel.app/"
+        repoLink="https://github.com/mhusman123"
         detailsLink="/projects/primebrothers"
         model={{
           type: 'screenshot',

@@ -2,7 +2,8 @@ import { Heading } from '~/components/heading';
 import { Section } from '~/components/section';
 import { Text } from '~/components/text';
 import { Transition } from '~/components/transition';
-import { Fragment } from 'react';
+import { Button } from '~/components/button';
+import { Fragment, useState } from 'react';
 import aiCert from '~/assets/AI.jpg.jpg';
 import dsCert from '~/assets/DS.jpg.jpg';
 import mlCert from '~/assets/ML.jpg.jpg';
@@ -59,6 +60,15 @@ const experiences = [
 
 export const Experience = ({ id, visible, sectionRef }) => {
   const titleId = `${id}-title`;
+  const [selectedCert, setSelectedCert] = useState(null);
+
+  const openCertModal = cert => {
+    setSelectedCert(cert);
+  };
+
+  const closeCertModal = () => {
+    setSelectedCert(null);
+  };
 
   return (
     <Section
@@ -78,7 +88,7 @@ export const Experience = ({ id, visible, sectionRef }) => {
               level={2}
               id={titleId}
             >
-              Experience
+              Work Experience &amp; Internships
             </Heading>
             <div className={styles.timeline}>
               {experiences.map((exp, index) => (
@@ -99,9 +109,14 @@ export const Experience = ({ id, visible, sectionRef }) => {
                       )}
                     </div>
                     <div className={styles.entryRight}>
-                      <Heading className={styles.role} level={4}>
-                        {exp.role}
-                      </Heading>
+                      <div className={styles.roleHeader}>
+                        <Heading className={styles.role} level={4}>
+                          {exp.role}
+                        </Heading>
+                        <span className={styles.verifiedBadge}>
+                          ✓ Verified Track
+                        </span>
+                      </div>
                       <a
                         className={styles.company}
                         href={exp.url}
@@ -123,22 +138,30 @@ export const Experience = ({ id, visible, sectionRef }) => {
                       </div>
                       {exp.cert && (
                         <div className={styles.certWrapper}>
-                          <Text className={styles.certLabel} size="s" as="p">
-                            Certificate of Completion
-                          </Text>
-                          <a
-                            href={exp.cert}
-                            target="_blank"
-                            rel="noreferrer"
+                          <div className={styles.certHeader}>
+                            <Text className={styles.certLabel} size="s" as="p">
+                              Certificate of Completion
+                            </Text>
+                            <button
+                              type="button"
+                              className={styles.zoomButton}
+                              onClick={() => openCertModal(exp)}
+                            >
+                              🔍 View Full Size
+                            </button>
+                          </div>
+                          <button
+                            type="button"
                             className={styles.certLink}
-                            aria-label={exp.certAlt}
+                            onClick={() => openCertModal(exp)}
+                            aria-label={`View full certificate for ${exp.role}`}
                           >
                             <img
                               src={exp.cert}
                               alt={exp.certAlt}
                               className={styles.certImage}
                             />
-                          </a>
+                          </button>
                         </div>
                       )}
                     </div>
@@ -149,6 +172,50 @@ export const Experience = ({ id, visible, sectionRef }) => {
           </div>
         )}
       </Transition>
+
+      {selectedCert && (
+        <div
+          className={styles.modalOverlay}
+          onClick={closeCertModal}
+          role="dialog"
+          aria-modal="true"
+          aria-label={selectedCert.certAlt}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={e => e.stopPropagation()}
+          >
+            <div className={styles.modalHeader}>
+              <h3 className={styles.modalTitle}>{selectedCert.certAlt}</h3>
+              <button
+                className={styles.modalClose}
+                onClick={closeCertModal}
+                aria-label="Close certificate preview"
+              >
+                ✕
+              </button>
+            </div>
+            <div className={styles.modalBody}>
+              <img
+                src={selectedCert.cert}
+                alt={selectedCert.certAlt}
+                className={styles.modalImage}
+              />
+            </div>
+            <div className={styles.modalFooter}>
+              <Button
+                href={selectedCert.cert}
+                target="_blank"
+                download
+                icon="arrow-right"
+              >
+                Open / Download Original
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </Section>
   );
 };
+

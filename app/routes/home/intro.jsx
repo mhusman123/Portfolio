@@ -1,3 +1,4 @@
+import { Button } from '~/components/button';
 import { DecoderText } from '~/components/decoder-text';
 import { Heading } from '~/components/heading';
 import { Section } from '~/components/section';
@@ -69,6 +70,10 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
               </Suspense>
             )}
             <header className={styles.text}>
+              <div className={styles.statusBadge} data-visible={visible}>
+                <span className={styles.statusDot} />
+                <span className={styles.statusText}>Available for ML &amp; AI Engineering Roles</span>
+              </div>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />
               </h1>
@@ -110,6 +115,40 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
                   ))}
                 </div>
               </Heading>
+              <div className={styles.quickStats} data-visible={visible}>
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>3+</span>
+                  <span className={styles.statLabel}>ML Internships</span>
+                </div>
+                <div className={styles.statDivider} />
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>10+</span>
+                  <span className={styles.statLabel}>Models Deployed</span>
+                </div>
+                <div className={styles.statDivider} />
+                <div className={styles.statItem}>
+                  <span className={styles.statNumber}>BS CS</span>
+                  <span className={styles.statLabel}>Graduated 2026</span>
+                </div>
+              </div>
+              <div className={styles.actions} data-visible={visible}>
+                <Button
+                  href="/#project-1"
+                  iconEnd="arrow-right"
+                  iconHoverShift
+                  onClick={handleScrollClick}
+                >
+                  Explore Projects
+                </Button>
+                <Button
+                  secondary
+                  href="/static/ML Resume.pdf"
+                  icon="arrow-right"
+                  target="_blank"
+                >
+                  View Resume
+                </Button>
+              </div>
             </header>
             <RouterLink
               to="/#project-1"
