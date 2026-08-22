@@ -1,6 +1,9 @@
 import fypTexture from '~/assets/fyp.png';
 import summarizerTexture from '~/assets/summarizer.png';
 import careerTexture from '~/assets/career.png';
+import bankingTexture from '~/assets/banking.png';
+import bakeryTexture from '~/assets/bakery.png';
+import chronopulseTexture from '~/assets/chronopulse.png';
 import storeTexture from '~/assets/store.png';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
@@ -47,11 +50,25 @@ export const Home = () => {
   const projectTwo = useRef();
   const projectThree = useRef();
   const projectFour = useRef();
+  const projectFive = useRef();
+  const projectSix = useRef();
+  const projectSeven = useRef();
   const experience = useRef();
   const details = useRef();
 
   useEffect(() => {
-    const sections = [intro, projectOne, projectTwo, projectThree, projectFour, experience, details];
+    const sections = [
+      intro,
+      projectOne,
+      projectTwo,
+      projectThree,
+      projectFour,
+      projectFive,
+      projectSix,
+      projectSeven,
+      experience,
+      details,
+    ];
 
     const sectionObserver = new IntersectionObserver(
       (entries, observer) => {
@@ -171,7 +188,7 @@ export const Home = () => {
         </div>
         <h2 className={styles.categoryTitle}>Full-Stack &amp; Web Applications</h2>
         <p className={styles.categorySubtitle}>
-          Modern responsive web applications, secure payment gateways, and scalable REST backends.
+          Modern responsive web applications, high-performance banking platforms, e-commerce solutions, and interactive tools.
         </p>
       </div>
       <ProjectSummary
@@ -180,6 +197,64 @@ export const Home = () => {
         sectionRef={projectFour}
         visible={visibleSections.includes(projectFour.current)}
         index={4}
+        category="Fintech / Full-Stack"
+        metrics={['Clean Architecture + CQRS', '.NET 10 + React 18', 'PayFast & 1-Link Sandbox']}
+        tags={['React 18', '.NET 10', 'Tailwind CSS v4', 'PostgreSQL', 'CQRS', 'PayFast']}
+        title="CoreBank — NextGen Enterprise Digital Banking Platform"
+        description="High-performance enterprise digital banking platform featuring SBP-regulated commercial ledgers, real-time PKR liquidity analytics, Raast QR checkout, and PayFast sandbox integration."
+        buttonText="Live Demo"
+        buttonLink="https://enterprise-banking.vercel.app/"
+        repoLink="https://github.com/mhusman123/Enterprise-Banking"
+        model={{
+          type: 'screenshot',
+          src: bankingTexture,
+          alt: 'CoreBank Enterprise Digital Banking Platform screenshot',
+        }}
+      />
+      <ProjectSummary
+        id="project-5"
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
+        category="E-Commerce / Full-Stack"
+        metrics={['Next.js 15 App Router', 'Zustand Cart Engine', 'Fuse.js Instant Search']}
+        tags={['Next.js 15', 'TypeScript', 'Tailwind CSS v4', 'Zustand', 'Framer Motion', 'Fuse.js']}
+        title="Porto's Donuts Bakery — Quetta Artisanal E-Commerce"
+        description="Modern gourmet bakery e-commerce platform with Quetta express delivery guard, custom donut flavor selectors, persistent Zustand cart management, and instant WhatsApp ordering."
+        buttonText="Live Demo"
+        buttonLink="https://bakery-website-theta-wine.vercel.app/"
+        repoLink="https://github.com/mhusman123/Bakery-Website"
+        model={{
+          type: 'screenshot',
+          src: bakeryTexture,
+          alt: "Porto's Donuts Bakery Quetta screenshot",
+        }}
+      />
+      <ProjectSummary
+        id="project-6"
+        alternate
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
+        category="Web Application"
+        metrics={['Real-Time Chrono Ticker', '9-Planet Cosmic Age', 'Lifetime Bio-Vitals Matrix']}
+        tags={['React 19', 'Vite', 'Tailwind CSS v4', 'Canvas Confetti', 'Glassmorphism']}
+        title="ChronoPulse — Modern Age & Life Insights Calculator"
+        description="Futuristic cyberpunk glassmorphic web application computing real-time live age down to seconds, 9-planet interplanetary cosmic age, bio-vital heartbeats/sleep statistics, and milestone timelines."
+        buttonText="Live Demo"
+        buttonLink="https://chrono-pulse-modern-age-life-calcul.vercel.app/"
+        repoLink="https://github.com/mhusman123/ChronoPulse-Modern-Age-Life-Calculator"
+        model={{
+          type: 'screenshot',
+          src: chronopulseTexture,
+          alt: 'ChronoPulse Modern Age & Life Calculator screenshot',
+        }}
+      />
+      <ProjectSummary
+        id="project-7"
+        sectionRef={projectSeven}
+        visible={visibleSections.includes(projectSeven.current)}
+        index={7}
         category="Full-Stack Web App"
         metrics={['PayFast Gateway', 'MERN Architecture', 'Responsive UI']}
         tags={['React', 'Node.js', 'Express', 'MongoDB', 'PayFast', 'REST API']}
