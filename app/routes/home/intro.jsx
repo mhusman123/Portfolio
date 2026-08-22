@@ -72,7 +72,7 @@ export function Intro({ id, sectionRef, scrollIndicatorHidden, ...rest }) {
             <header className={styles.text}>
               <div className={styles.statusBadge} data-visible={visible}>
                 <span className={styles.statusDot} />
-                <span className={styles.statusText}>Available for ML &amp; AI Engineering Roles</span>
+                <span className={styles.statusText}>Available for AI/ML &amp; Web Engineering Roles</span>
               </div>
               <h1 className={styles.name} data-visible={visible} id={titleId}>
                 <DecoderText text={config.name} delay={500} />

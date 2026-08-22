@@ -34,8 +34,8 @@ export const links = () => {
 
 export const meta = () => {
   return baseMeta({
-    title: 'ML Engineer + Data Scientist',
-    description: `Portfolio of ${config.name} — a Machine Learning & AI Engineer specialising in deep learning, NLP, computer vision, and Python-powered data science solutions.`,
+    title: 'AI/ML Engineer + Web Engineer',
+    description: `Portfolio of ${config.name} — an AI/ML Engineer and Web Engineer specialising in deep learning, NLP, computer vision, and modern full-stack web solutions.`,
   });
 };
 
