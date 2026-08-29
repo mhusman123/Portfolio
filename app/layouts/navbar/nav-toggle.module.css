@@ -1,16 +1,26 @@
 @layer layout {
   .toggle {
-    --offset: var(--spaceXS);
-    --inset: calc(var(--spaceOuter) - var(--offset));
-
-    position: fixed;
-    top: var(--inset);
-    right: var(--inset);
-    z-index: var(--zIndex4);
+    position: relative;
+    z-index: var(--zIndex2);
     display: none;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--textTitle) 5%, transparent);
+    border: 1px solid color-mix(in srgb, var(--textTitle) 10%, transparent);
+    cursor: pointer;
+    transition: background var(--durationS) ease, border-color var(--durationS) ease;
 
-    @media (--mediaMobile), (--mediaMobileLS) {
+    @media (--mediaTablet), (--mediaMobile), (--mediaMobileLS) {
       display: flex;
+    }
+
+    &:hover {
+      background: color-mix(in srgb, var(--primary) 12%, transparent);
+      border-color: var(--primary);
     }
   }
 

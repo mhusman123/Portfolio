@@ -84,10 +84,10 @@
 
 .name {
   text-transform: uppercase;
-  font-size: calc((24 / 16) * 1rem);
-  letter-spacing: 0.3em;
+  font-size: var(--fontSizeBodyM);
+  letter-spacing: 0.25em;
   color: var(--textLight);
-  margin-bottom: var(--space2XL);
+  margin-bottom: var(--spaceM);
   margin-top: 0;
   font-weight: var(--fontWeightMedium);
   line-height: 1;
@@ -95,17 +95,17 @@
   transition: opacity var(--durationL) var(--bezierFastoutSlowin) 0.2s;
 
   @media (--mediaLaptop) {
-    font-size: calc((22 / 16) * 1rem);
-    margin-bottom: var(--spaceXL);
+    font-size: var(--fontSizeBodyM);
+    margin-bottom: var(--spaceM);
   }
 
   @media (--mediaTablet) {
-    font-size: calc((18 / 16) * 1rem);
+    font-size: var(--fontSizeBodyS);
   }
 
   @media (--mediaMobile) {
-    margin-bottom: var(--spaceL);
-    letter-spacing: 0.2em;
+    margin-bottom: var(--spaceS);
+    letter-spacing: 0.18em;
     white-space: nowrap;
     overflow: hidden;
   }

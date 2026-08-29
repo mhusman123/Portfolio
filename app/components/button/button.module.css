@@ -1,8 +1,8 @@
 @layer components {
   .button {
-    --buttonSize: calc((56 / 16) * 1rem);
-    --buttonFontSize: calc((18 / 16) * 1rem);
-    --buttonFocusWidth: 4px;
+    --buttonSize: calc((44 / 16) * 1rem);
+    --buttonFontSize: calc((14 / 16) * 1rem);
+    --buttonFocusWidth: 3px;
     --buttonPadding: 0 var(--spaceL);
     --buttonTextColor: var(--background);
     --buttonTextOpacity: 1;
@@ -11,14 +11,17 @@
     height: var(--buttonSize);
     padding: var(--buttonPadding);
     cursor: pointer;
-    transition-property: opacity, color, background;
+    border-radius: 8px;
+    transition-property: opacity, color, background, transform, border-color, box-shadow;
     transition-duration: var(--durationS);
     transition-timing-function: var(--bezierFastoutSlowin);
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     color: var(--buttonTextColor);
     position: relative;
     isolation: isolate;
+    text-decoration: none;
 
     &:active {
       transition-duration: calc(var(--durationXS) / 2);
@@ -32,68 +35,55 @@
       background: var(--primary);
       position: absolute;
       inset: 0;
+      border-radius: 8px;
       z-index: -1;
-      clip-path: polygon(
-        0 0,
-        100% 0,
-        100% calc(100% - 8px),
-        calc(100% - 8px) 100%,
-        0 100%
-      );
     }
 
     @media (--mediaUseMotion) {
-      transition-property: transform, opacity, color, background;
-
       &:hover {
-        transform: scale(1.05);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 30%, transparent);
       }
 
       &:active {
-        transform: scale(1);
+        transform: translateY(0);
       }
     }
 
     &[data-secondary='true'] {
-      --buttonSpace: 10px;
       --buttonTextColor: var(--primary);
 
-      background: none;
-      padding-left: var(--buttonSpace);
-      padding-right: var(--buttonSpace);
+      background: color-mix(in srgb, var(--primary) 8%, transparent);
+      border: 1px solid color-mix(in srgb, var(--primary) 35%, transparent);
+      padding: 0 var(--spaceL);
+      height: var(--buttonSize);
+      border-radius: 8px;
       position: relative;
-      left: calc(var(--buttonSpace) * -1);
-      height: calc((32 / 16) * 1rem);
+      left: 0;
 
       &::after {
         content: '';
-        height: calc((32 / 16) * 1rem);
         position: absolute;
         inset: 0;
-        background-color: color-mix(in lab, var(--primary) 20%, transparent);
-        transform: scale3d(0, 1, 1);
-        transform-origin: right;
+        border-radius: 8px;
+        background-color: color-mix(in srgb, var(--primary) 15%, transparent);
+        opacity: 0;
+        transition: opacity var(--durationS) ease;
         clip-path: none;
       }
 
       &:hover {
-        transform: none;
-        background: transparent;
+        border-color: var(--primary);
+        color: var(--primary);
+        box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 20%, transparent);
       }
 
       &:hover::after {
-        transform: scale3d(1, 1, 1);
-        transform-origin: left;
+        opacity: 1;
       }
 
       &[data-icon='chevron-right'] {
-        padding-left: calc(var(--buttonSpace) / 2);
-      }
-
-      @media (--mediaUseMotion) {
-        &::after {
-          transition: transform var(--durationM) var(--bezierFastoutSlowin);
-        }
+        padding-right: var(--spaceM);
       }
     }
 

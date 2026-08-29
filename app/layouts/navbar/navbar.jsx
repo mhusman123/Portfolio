@@ -21,7 +21,7 @@ export const Navbar = () => {
   const location = useLocation();
   const windowSize = useWindowSize();
   const headerRef = useRef();
-  const isMobile = windowSize.width <= media.mobile || windowSize.height <= 696;
+  const isMobile = windowSize.width <= media.tablet || windowSize.height <= 696;
   const scrollToHash = useScrollToHash();
 
   useEffect(() => {
@@ -35,82 +35,6 @@ export const Navbar = () => {
     setCurrent(`${location.pathname}${target}`);
     scrollToHash(target, () => setTarget(null));
   }, [location.pathname, scrollToHash, target]);
-
-  // Handle swapping the theme when intersecting with inverse themed elements
-  useEffect(() => {
-    const navItems = document.querySelectorAll('[data-navbar-item]');
-    const inverseTheme = theme === 'dark' ? 'light' : 'dark';
-    const { innerHeight } = window;
-
-    let inverseMeasurements = [];
-    let navItemMeasurements = [];
-
-    const isOverlap = (rect1, rect2, scrollY) => {
-      return !(rect1.bottom - scrollY < rect2.top || rect1.top - scrollY > rect2.bottom);
-    };
-
-    const resetNavTheme = () => {
-      for (const measurement of navItemMeasurements) {
-        measurement.element.dataset.theme = '';
-      }
-    };
-
-    const handleInversion = () => {
-      const invertedElements = document.querySelectorAll(
-        `[data-theme='${inverseTheme}'][data-invert]`
-      );
-
-      if (!invertedElements) return;
-
-      inverseMeasurements = Array.from(invertedElements).map(item => ({
-        element: item,
-        top: item.offsetTop,
-        bottom: item.offsetTop + item.offsetHeight,
-      }));
-
-      const { scrollY } = window;
-
-      resetNavTheme();
-
-      for (const inverseMeasurement of inverseMeasurements) {
-        if (
-          inverseMeasurement.top - scrollY > innerHeight ||
-          inverseMeasurement.bottom - scrollY < 0
-        ) {
-          continue;
-        }
-
-        for (const measurement of navItemMeasurements) {
-          if (isOverlap(inverseMeasurement, measurement, scrollY)) {
-            measurement.element.dataset.theme = inverseTheme;
-          } else {
-            measurement.element.dataset.theme = '';
-          }
-        }
-      }
-    };
-
-    // Currently only the light theme has dark full-width elements
-    if (theme === 'light') {
-      navItemMeasurements = Array.from(navItems).map(item => {
-        const rect = item.getBoundingClientRect();
-
-        return {
-          element: item,
-          top: rect.top,
-          bottom: rect.bottom,
-        };
-      });
-
-      document.addEventListener('scroll', handleInversion);
-      handleInversion();
-    }
-
-    return () => {
-      document.removeEventListener('scroll', handleInversion);
-      resetNavTheme();
-    };
-  }, [theme, windowSize, location.key]);
 
   // Check if a nav item should be active
   const getCurrent = (url = '') => {
@@ -151,8 +75,9 @@ export const Navbar = () => {
         onClick={handleMobileNavClick}
       >
         <Monogram highlight />
+        <span className={styles.logoText}>{config.name}</span>
       </RouterLink>
-      <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
+
       <nav className={styles.nav}>
         <div className={styles.navList}>
           {navLinks.map(({ label, pathname }) => (
@@ -170,42 +95,53 @@ export const Navbar = () => {
             </RouterLink>
           ))}
         </div>
-        <NavbarIcons desktop />
       </nav>
+
+      <div className={styles.headerActions}>
+        <NavbarIcons desktop />
+        <ThemeToggle data-navbar-item />
+        <NavToggle onClick={() => setMenuOpen(!menuOpen)} menuOpen={menuOpen} />
+      </div>
+
       <Transition unmount in={menuOpen} timeout={msToNum(tokens.base.durationL)}>
         {({ visible, nodeRef }) => (
           <nav className={styles.mobileNav} data-visible={visible} ref={nodeRef}>
-            {navLinks.map(({ label, pathname }, index) => (
-              <RouterLink
-                unstable_viewTransition
-                prefetch="intent"
-                to={pathname}
-                key={label}
-                className={styles.mobileNavLink}
-                data-visible={visible}
-                aria-current={getCurrent(pathname)}
-                onClick={handleMobileNavClick}
-                style={cssProps({
-                  transitionDelay: numToMs(
-                    Number(msToNum(tokens.base.durationS)) + index * 50
-                  ),
-                })}
-              >
-                {label}
-              </RouterLink>
-            ))}
-            <NavbarIcons />
-            <ThemeToggle isMobile />
+            <div className={styles.mobileNavHeader}>
+              <span className={styles.mobileNavTitle}>Navigation</span>
+            </div>
+            <div className={styles.mobileNavLinks}>
+              {navLinks.map(({ label, pathname }, index) => (
+                <RouterLink
+                  unstable_viewTransition
+                  prefetch="intent"
+                  to={pathname}
+                  key={label}
+                  className={styles.mobileNavLink}
+                  data-visible={visible}
+                  aria-current={getCurrent(pathname)}
+                  onClick={handleMobileNavClick}
+                  style={cssProps({
+                    transitionDelay: numToMs(
+                      Number(msToNum(tokens.base.durationS)) + index * 40
+                    ),
+                  })}
+                >
+                  {label}
+                </RouterLink>
+              ))}
+            </div>
+            <div className={styles.mobileNavFooter}>
+              <NavbarIcons />
+            </div>
           </nav>
         )}
       </Transition>
-      {!isMobile && <ThemeToggle data-navbar-item />}
     </header>
   );
 };
 
 const NavbarIcons = ({ desktop }) => (
-  <div className={styles.navIcons}>
+  <div className={styles.navIcons} data-desktop={desktop || undefined}>
     {socialLinks.map(({ label, url, icon }) => (
       <a
         key={label}

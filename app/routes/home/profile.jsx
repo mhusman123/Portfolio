@@ -139,7 +139,7 @@ const ProfileText = ({ visible, titleId }) => (
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
       <DecoderText text="Hi there" start={visible} delay={500} />
     </Heading>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    <Text className={styles.description} data-visible={visible} size="s" as="p">
       I&apos;m <strong>Muhammad Usman</strong> — a fresh{' '}
       <strong>Machine Learning Engineer</strong> and <strong>AI Engineer</strong>{' '}
       who graduated with a Bachelor of Science in Computer Science from the{' '}
@@ -151,7 +151,7 @@ const ProfileText = ({ visible, titleId }) => (
       applications. Take a look at the tools I work with on my{' '}
       <Link href="/uses">uses page</Link>.
     </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    <Text className={styles.description} data-visible={visible} size="s" as="p">
       <strong>Core stack:</strong> Python is my primary language across the full ML
       lifecycle. I build and train models with <strong>Scikit-learn</strong>,{' '}
       <strong>TensorFlow / Keras</strong>, and <strong>PyTorch</strong>, serve them
@@ -162,14 +162,14 @@ const ProfileText = ({ visible, titleId }) => (
       version-controlled with Git. I am actively expanding my cloud skills on{' '}
       <strong>AWS</strong> (EC2, S3, Lambda, SageMaker).
     </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    <Text className={styles.description} data-visible={visible} size="s" as="p">
       <strong>What I specialise in:</strong> Supervised &amp; unsupervised learning,
       Natural Language Processing, Computer Vision, Time-Series forecasting,
       end-to-end MLOps pipelines, and REST API development for ML products. I enjoy
       bridging the gap between research-quality models and production-ready systems
       that genuinely help people.
     </Text>
-    <Text className={styles.description} data-visible={visible} size="l" as="p">
+    <Text className={styles.description} data-visible={visible} size="s" as="p">
       <strong>Currently learning:</strong> Fine-tuning{' '}
       <strong>Large Language Models</strong> with HuggingFace PEFT / LoRA, building{' '}
       <Link href="https://en.wikipedia.org/wiki/Retrieval-augmented_generation">

@@ -334,6 +334,10 @@
 }
 
 .button {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--spaceM);
   transition-property: opacity;
   transition-timing-function: var(--bezierFastoutSlowin);
   transition-duration: var(--durationXL);
@@ -353,21 +357,11 @@
 }
 
 .detailsButton {
-  margin-left: var(--spaceM);
-
-  @media (--mediaMobile) {
-    margin-left: 0;
-    margin-top: var(--spaceS);
-  }
+  margin: 0;
 }
 
 .repoButton {
-  margin-left: var(--spaceM);
-
-  @media (--mediaMobile) {
-    margin-left: 0;
-    margin-top: var(--spaceS);
-  }
+  margin: 0;
 }
 
 .moreDetailsToggle {
