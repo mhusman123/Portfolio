@@ -36,6 +36,21 @@ export const Navbar = () => {
     scrollToHash(target, () => setTarget(null));
   }, [location.pathname, scrollToHash, target]);
 
+  // Prevent background scroll when mobile nav is open
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    };
+  }, [menuOpen]);
+
   // Check if a nav item should be active
   const getCurrent = (url = '') => {
     const nonTrailing = current?.endsWith('/') ? current?.slice(0, -1) : current;

@@ -16,7 +16,7 @@
     right: 0;
     z-index: var(--zIndex4);
     isolation: isolate;
-    background: color-mix(in srgb, var(--background) 82%, transparent);
+    background: color-mix(in srgb, var(--background) 85%, transparent);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid color-mix(in srgb, var(--textTitle) 10%, transparent);
@@ -161,41 +161,52 @@
   }
 
   .mobileNav {
-    --backdrop: blur(24px) saturate(140%);
+    --backdrop: blur(28px) saturate(160%);
 
     position: fixed;
-    inset: 0;
     top: var(--headerHeight, 58px);
-    background: color-mix(in srgb, var(--background) 95%, transparent);
-    transform: translate3d(0, -100%, 0);
-    transition: transform var(--durationM) var(--bezierFastoutSlowin), opacity var(--durationM) var(--bezierFastoutSlowin);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: calc(100dvh - var(--headerHeight, 58px));
+    max-height: calc(100dvh - var(--headerHeight, 58px));
+    width: 100vw;
+    background: color-mix(in srgb, var(--background) 96%, transparent);
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform var(--durationM) var(--bezierFastoutSlowin), opacity var(--durationM) ease;
     display: none;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: var(--space2XL) var(--spaceL);
+    padding: var(--spaceXL) var(--spaceL) calc(var(--space3XL) + 48px);
     -webkit-backdrop-filter: var(--backdrop);
     backdrop-filter: var(--backdrop);
     border-bottom: 1px solid color-mix(in srgb, var(--textTitle) 12%, transparent);
     overflow-y: auto;
-    z-index: var(--zIndex3);
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+    touch-action: pan-y;
+    z-index: var(--zIndex4);
 
     @media (--mediaTablet), (--mediaMobile), (--mediaMobileLS) {
       display: flex;
     }
 
     &[data-visible='true'] {
-      transform: none;
+      transform: translateY(0);
+      opacity: 1;
     }
   }
 
   .mobileNavHeader {
     width: 100%;
-    max-width: 400px;
+    max-width: 440px;
     text-align: left;
     margin-bottom: var(--spaceM);
     border-bottom: 1px solid color-mix(in srgb, var(--textTitle) 10%, transparent);
     padding-bottom: var(--spaceS);
+    flex-shrink: 0;
   }
 
   .mobileNavTitle {
@@ -210,26 +221,34 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 400px;
-    gap: var(--spaceS);
+    max-width: 440px;
+    gap: var(--spaceM);
+    flex-shrink: 0;
   }
 
   .mobileNavLink {
     width: 100%;
-    font-size: var(--fontSizeBodyM);
+    min-height: 50px;
+    font-size: var(--fontSizeBodyL);
     font-weight: var(--fontWeightMedium);
     text-align: center;
     text-decoration: none;
     color: var(--textTitle);
-    padding: var(--spaceM) var(--spaceL);
+    padding: 14px var(--spaceL);
     border-radius: 12px;
     background: color-mix(in srgb, var(--textTitle) 6%, transparent);
     border: 1px solid color-mix(in srgb, var(--textTitle) 12%, transparent);
-    opacity: 0;
-    transition: opacity var(--durationS) var(--bezierFastoutSlowin),
-      background var(--durationS) ease,
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--durationS) ease,
       border-color var(--durationS) ease,
-      transform var(--durationS) var(--bezierFastoutSlowin);
+      transform var(--durationS) ease,
+      color var(--durationS) ease;
+
+    &:active {
+      transform: scale(0.98);
+    }
 
     &:hover {
       background: color-mix(in srgb, var(--primary) 15%, transparent);
@@ -244,17 +263,15 @@
       border-color: var(--primary);
       box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 30%, transparent);
     }
-
-    &[data-visible='true'] {
-      opacity: 1;
-    }
   }
 
   .mobileNavFooter {
-    margin-top: var(--space2XL);
+    margin-top: var(--spaceXL);
+    margin-bottom: var(--spaceXL);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spaceM);
+    flex-shrink: 0;
   }
 }
