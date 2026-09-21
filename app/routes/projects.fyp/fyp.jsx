@@ -16,10 +16,10 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './fyp.module.css';
 
-const title = 'Hybrid Automated Grading & Learning Analytics Platform';
+const title = 'Sindh School of Technology — Educational Management Platform';
 const description =
-  'A neuro-symbolic AI platform combining deterministic code evaluation with generative AI feedback and longitudinal learning analytics — my final year thesis project.';
-const roles = ['ML Engineering', 'Python Scripting', 'Frontend (React)', 'Data Analytics'];
+  'A comprehensive digital educational management system, smart AI campus platform, and trilingual learning environment developed as my Final Year Project (FYP) for the University of Sindh, Jamshoro.';
+const roles = ['Full-Stack Engineering', 'Next.js & React', 'Trilingual Architecture', 'PostgreSQL & Analytics'];
 
 export const meta = () => {
   return baseMeta({ title, description, prefix: 'Projects' });
@@ -32,7 +32,7 @@ export const FYP = () => {
         <ProjectHeader
           title={title}
           description={description}
-          url="https://sindhmitty.vercel.app/"
+          url="https://fyp-f8xk.vercel.app/"
           roles={roles}
         />
         <ProjectSection padding="top">
@@ -41,7 +41,7 @@ export const FYP = () => {
               src={fypTexture}
               width={1280}
               height={800}
-              alt="Automated Grading Platform dashboard screenshot"
+              alt="Sindh School of Technology Educational Platform screenshot"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -49,14 +49,14 @@ export const FYP = () => {
 
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The Problem</ProjectSectionHeading>
+            <ProjectSectionHeading>The Vision &amp; Challenge</ProjectSectionHeading>
             <ProjectSectionText>
-              In modern computer science education, manually grading programming assignments
-              at scale is slow, inconsistent, and impossible to personalise. Traditional
-              automated graders return only binary pass/fail results — they tell students
-              <em> what</em> failed, not <em>why</em>, and offer no path forward. At the
-              same time, relying on LLMs alone introduces hallucination risk: AI feedback
-              without grounding in actual program output can actively mislead learners.
+              Modern educational institutions require unified digital ecosystems that seamlessly connect
+              students, faculty, administrators, and parents. For institutions in Sindh, Pakistan, this
+              presents a unique requirement: delivering world-class Cambridge CAIE and Sindh BISE curriculum
+              tracking while offering seamless native fluency across three official languages — English,
+              Urdu, and Sindhi. The platform was designed to eliminate administrative fragmentation and
+              deliver real-time academic insights.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -64,16 +64,13 @@ export const FYP = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Neuro-Symbolic Architecture</ProjectSectionHeading>
+              <ProjectSectionHeading>Trilingual &amp; Dual-Board Architecture</ProjectSectionHeading>
               <ProjectSectionText>
-                The grading pipeline is built around two complementary layers. First, a
-                <strong> symbolic evaluation layer</strong> — short Python scripts running
-                static analysers, compilers, linters, and unit testing frameworks — verify
-                syntactic correctness and logical validity, producing structured execution
-                logs. Only after this deterministic pass does the system invoke the
-                <strong>Google Gemini API</strong>, anchoring its explanations to real
-                program output. This verify-then-generate protocol dramatically reduces
-                hallucination risk.
+                The platform features a localized content and internationalization engine enabling complete
+                trilingual switching across English, Urdu, and Sindhi. It integrates dual-curriculum management
+                for Cambridge CAIE (O/A Levels) alongside Sindh BISE / FBISE Matriculation and Intermediate boards.
+                Student records, course syllabi, examination rubrics, and digital certificates are dynamically
+                rendered with full RTL (Right-to-Left) script optimization.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -82,28 +79,20 @@ export const FYP = () => {
         <ProjectSection>
           <ProjectSectionColumns>
             <ProjectTextRow>
-              <ProjectSectionHeading>Learning Analytics</ProjectSectionHeading>
+              <ProjectSectionHeading>Smart Campus &amp; AI Labs Integration</ProjectSectionHeading>
               <ProjectSectionText>
-                Beyond grading, the platform captures high-resolution learning telemetry:
-                syntax error frequency, compilation latency, test-case failure patterns,
-                time between error introduction and resolution, and re-submission counts.
-                These feed into <strong>Longitudinal Skill Profiles</strong> — continuous
-                representations of how each student&apos;s abilities evolve across the course.
-              </ProjectSectionText>
-              <ProjectSectionText>
-                Instructors gain an analytics dashboard that spots students struggling with
-                specific concepts, taking unusually long to debug, or making repeated errors
-                — enabling early intervention rather than post-hoc remediation.
+                Integrated with smart computer science classrooms and robotics centers, the platform
+                incorporates automated code grading, real-time telemetry, and longitudinal performance tracking.
+                Instructors can monitor student progress across computational thinking assignments, identifying
+                cognitive bottlenecks early and providing automated, scaffolded feedback.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectTextRow>
-              <ProjectSectionHeading>Time-Weighted Error Quotient</ProjectSectionHeading>
+              <ProjectSectionHeading>Admissions, Fees &amp; Portal Management</ProjectSectionHeading>
               <ProjectSectionText>
-                The research introduced a novel metric — the <strong>Time-Weighted Error
-                Quotient (EQ)</strong> — which quantifies the intensity and persistence of
-                coding errors during development. By weighting error events by the time
-                spent in an erroneous state, EQ provides a more nuanced picture of cognitive
-                difficulty than simple error counts alone.
+                Features automated student onboarding, online fee invoice generation with verification workflows,
+                parent enquiry management, and role-based access control (RBAC) ensuring secure student, parent,
+                and teacher communication.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionColumns>
@@ -113,7 +102,7 @@ export const FYP = () => {
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack</ProjectSectionHeading>
             <ProjectSectionText>
-              Python · Google Gemini API · React · PostgreSQL · Vercel
+              Next.js 15 · React · TypeScript · Tailwind CSS · PostgreSQL · FastAPI · Vercel
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>

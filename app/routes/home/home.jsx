@@ -125,19 +125,19 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        category="AI & Analytics"
-        metrics={['Rule-Based Logic', 'Analytics Engine', 'Automated Grading']}
-        tags={['Python', 'FastAPI', 'Next.js', 'PostgreSQL', 'Data Analytics']}
-        title="Automated Grading & Learning Analytics"
-        description="Intelligent automated grading system using rule-based logic and data analytics to evaluate student performance, reduce manual grading effort, and provide learning insights."
+        category="AI & EdTech / Full-Stack"
+        metrics={['Trilingual (EN / UR / SD)', 'Next.js & PostgreSQL', 'Smart Campus & AI Labs']}
+        tags={['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'FastAPI', 'EdTech']}
+        title="Sindh School of Technology — Educational Management Platform"
+        description="Comprehensive educational management and smart campus platform for Sindh School of Technology. Features trilingual support (English, Urdu, Sindhi), interactive admissions, automated grading analytics, and smart AI lab integrations."
         buttonText="Live Demo"
-        buttonLink="https://sindhmitty.vercel.app/"
+        buttonLink="https://fyp-f8xk.vercel.app/"
         repoLink="https://github.com/mhusman123"
         detailsLink="/projects/fyp"
         model={{
           type: 'screenshot',
           src: fypTexture,
-          alt: 'Automated Grading Platform screenshot',
+          alt: 'Sindh School of Technology Educational Management Platform screenshot',
         }}
       />
       <ProjectSummary
