@@ -125,11 +125,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        category="AI & EdTech / Full-Stack"
-        metrics={['Trilingual (EN / UR / SD)', 'Next.js & PostgreSQL', 'Smart Campus & AI Labs']}
-        tags={['Next.js 15', 'React', 'TypeScript', 'Tailwind CSS', 'PostgreSQL', 'FastAPI', 'EdTech']}
-        title="Sindh School of Technology — Educational Management Platform"
-        description="Comprehensive educational management and smart campus platform for Sindh School of Technology. Features trilingual support (English, Urdu, Sindhi), interactive admissions, automated grading analytics, and smart AI lab integrations."
+        category="AI & EdTech / Intelligence Platform"
+        metrics={['Multi-Model AI (Gemini / DeepSeek)', 'AI Quiz Arena & Autograder', 'Trilingual (EN / UR / SD)']}
+        tags={['Next.js 15', 'TypeScript', 'Gemini 1.5', 'DeepSeek-R1', 'FastAPI', 'PostgreSQL', 'Tailwind CSS']}
+        title="SST Nexus — Intelligent AI Tutoring & Socratic Learning Platform"
+        description="Full-stack educational intelligence platform featuring multi-model Socratic AI tutoring (GPT-4o, Gemini 1.5, DeepSeek-R1), timed AI Quiz Arena with Fisher-Yates randomization, 4-tier formative autograding, and trilingual support (English, Urdu, Sindhi)."
         buttonText="Live Demo"
         buttonLink="https://fyp-f8xk.vercel.app/"
         repoLink="https://github.com/mhusman123"
@@ -137,7 +137,7 @@ export const Home = () => {
         model={{
           type: 'screenshot',
           src: fypTexture,
-          alt: 'Sindh School of Technology Educational Management Platform screenshot',
+          alt: 'SST Nexus Intelligent AI Tutoring & Socratic Learning Platform screenshot',
         }}
       />
       <ProjectSummary
