@@ -126,10 +126,10 @@ export const Home = () => {
         visible={visibleSections.includes(projectOne.current)}
         index={1}
         category="AI & EdTech / Intelligence Platform"
-        metrics={['Multi-Model AI (Gemini / DeepSeek)', 'AI Quiz Arena & Autograder', 'Trilingual (EN / UR / SD)']}
+        metrics={['Trilingual (EN / UR / SD)', 'Cambridge CAIE & BISE', 'Smart AI Labs & Campus']}
         tags={['Next.js 15', 'TypeScript', 'Gemini 1.5', 'DeepSeek-R1', 'FastAPI', 'PostgreSQL', 'Tailwind CSS']}
-        title="SST Nexus — Intelligent AI Tutoring & Socratic Learning Platform"
-        description="Full-stack educational intelligence platform featuring multi-model Socratic AI tutoring (GPT-4o, Gemini 1.5, DeepSeek-R1), timed AI Quiz Arena with Fisher-Yates randomization, 4-tier formative autograding, and trilingual support (English, Urdu, Sindhi)."
+        title="Sindh School of Technology (SST Nexus) — Trilingual Educational Platform & Smart AI Campus"
+        description="Premier educational management system and smart AI campus for Sindh School of Technology (SST). Features comprehensive trilingual immersion in English, Urdu, and Sindhi, interactive admissions, AI autograding, live robotics lab stream, and dual Cambridge CAIE & Sindh BISE curriculum management."
         buttonText="Live Demo"
         buttonLink="https://fyp-f8xk.vercel.app/"
         repoLink="https://github.com/mhusman123"
@@ -137,7 +137,7 @@ export const Home = () => {
         model={{
           type: 'screenshot',
           src: fypTexture,
-          alt: 'SST Nexus Intelligent AI Tutoring & Socratic Learning Platform screenshot',
+          alt: 'Sindh School of Technology (SST Nexus) Educational Platform screenshot',
         }}
       />
       <ProjectSummary

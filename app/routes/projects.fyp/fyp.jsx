@@ -16,14 +16,14 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './fyp.module.css';
 
-const title = 'SST Nexus — Intelligent AI Tutoring & Socratic Learning Platform';
+const title = 'Sindh School of Technology (SST Nexus) — Trilingual Educational Platform & Smart AI Campus';
 const description =
-  'A full-stack educational intelligence platform featuring multi-model Socratic AI tutoring, timed AI Quiz Arena with zero-repetition randomization, 4-tier formative autograding, and native trilingual support (English, Urdu, Sindhi).';
+  'A premier digital educational management system, smart AI campus platform, and trilingual learning environment developed as my Final Year Project (FYP) for Sindh School of Technology (SST) and the University of Sindh, Jamshoro.';
 const roles = [
   'Full-Stack & AI Engineering',
-  'Multi-Model LLM Gateway (Gemini 1.5 / DeepSeek-R1 / GPT-4o)',
-  'Socratic Tutoring Engine',
-  'Autograding & Learning Telemetry',
+  'Trilingual Architecture (English • Urdu • Sindhi)',
+  'Multi-Model AI Gateway (Gemini 1.5 / DeepSeek-R1 / GPT-4o)',
+  'Dual-Curriculum Integration (Cambridge CAIE & Sindh BISE)',
 ];
 
 export const meta = () => {
@@ -44,9 +44,9 @@ export const FYP = () => {
           <ProjectSectionContent>
             <ProjectImage
               src={fypTexture}
-              width={1280}
-              height={800}
-              alt="SST Nexus Intelligent AI Tutoring and Educational Platform screenshot"
+              width={1440}
+              height={900}
+              alt="Sindh School of Technology (SST Nexus) Educational Platform screenshot"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -54,17 +54,17 @@ export const FYP = () => {
 
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The Vision &amp; Problem</ProjectSectionHeading>
+            <ProjectSectionHeading>The Vision &amp; Purpose</ProjectSectionHeading>
             <ProjectSectionText>
-              Traditional educational software presents two extremes: rigid autograders that offer binary
-              pass/fail marks without explaining why, or generic LLMs that hallucinate solutions and give away
-              answers immediately, short-circuiting genuine student comprehension.
+              Modern educational institutions across Sindh, Pakistan require unified digital platforms that seamlessly
+              connect students, teachers, administrators, and parents. <strong>Sindh School of Technology (SST)</strong>
+              and its Sixth Form branch, <strong>SST Nexus</strong>, demanded a system that pairs world-class Cambridge CAIE
+              and Sindh BISE curriculum management with a culturally rooted, <strong>trilingual learning experience in English,
+              Urdu, and Sindhi</strong>.
             </ProjectSectionText>
             <ProjectSectionText>
-              <strong>SST Nexus</strong> resolves this paradigm by delivering an intelligent Socratic tutoring
-              ecosystem. Built specifically to empower educational institutions in Sindh and Pakistan, it combines
-              zero-spoil pedagogical guardrails, adaptive exam simulations, automated rubric evaluations, and
-              trilingual immersion across English, Urdu, and Sindhi.
+              This platform serves as a complete digital institution: uniting online admissions, fee workflows, live AI lab
+              and robotics streams, socratic AI tutoring, and automated rubric evaluations under one modern interface.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -72,16 +72,15 @@ export const FYP = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Multi-Model AI Gateway &amp; Socratic Reasoning</ProjectSectionHeading>
+              <ProjectSectionHeading>Trilingual &amp; Dual-Curriculum Architecture</ProjectSectionHeading>
               <ProjectSectionText>
-                The platform incorporates an interchangeable AI reasoning core powered by <strong>Google Gemini 1.5 Flash</strong>,
-                <strong>DeepSeek-R1</strong>, and <strong>GPT-4o</strong>. A low-latency streaming pipeline (&lt;800ms) delivers
-                step-by-step guidance, breaking down complex calculus, physics, chemistry, biology, and computer science problems
-                into manageable conceptual milestones.
+                Built with a native internationalization engine, the platform enables effortless language switching across
+                <strong> English, Urdu (اردو), and Sindhi (سنڌي)</strong> with customized Right-to-Left (RTL) typography.
               </ProjectSectionText>
               <ProjectSectionText>
-                Every interaction is governed by strict zero-spoil guardrails with full KaTeX / LaTeX mathematical
-                formula typesetting and biochemical diagram rendering, training students to discover answers through deductive inquiry.
+                It facilitates dual-curriculum certification for Cambridge CAIE (O/A Levels) alongside Sindh BISE / FBISE
+                Matriculation and Intermediate boards, allowing students and educators to access syllabi, timetables, and
+                diagnostic scorecards in their chosen language.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -90,43 +89,29 @@ export const FYP = () => {
         <ProjectSection>
           <ProjectSectionColumns>
             <ProjectTextRow>
-              <ProjectSectionHeading>AI Quiz Arena &amp; Exam Simulator</ProjectSectionHeading>
+              <ProjectSectionHeading>Smart AI Classrooms &amp; Socratic Tutor</ProjectSectionHeading>
               <ProjectSectionText>
-                Features an interactive 3-tier timed exam simulator (10-minute / 20-question, 17-minute / 35-question,
-                and 25-minute / 50-question presets) utilizing the <strong>Fisher-Yates zero-repetition randomization algorithm</strong>.
-                Students receive live, in-quiz Socratic hints that guide thinking without compromising score integrity, culminating
-                in granular topic-level mastery scorecards.
+                Integrated with smart computer science classrooms and robotics centers, the platform incorporates an AI reasoning
+                gateway (powered by <strong>Google Gemini 1.5 Flash</strong> and <strong>DeepSeek-R1</strong>) with strict zero-spoil
+                pedagogical guardrails and KaTeX / LaTeX formula rendering, guiding students through complex STEM concepts.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectTextRow>
-              <ProjectSectionHeading>Formative Rubric Autograder &amp; Copilot</ProjectSectionHeading>
+              <ProjectSectionHeading>AI Quiz Arena &amp; Autograding Copilot</ProjectSectionHeading>
               <ProjectSectionText>
-                Educators benefit from a 4-tier rubric evaluation system that analyzes open-ended student submissions,
-                produces actionable revision roadmaps, and conducts semantic originality checks. Longitudinal skill telemetry
-                helps teachers identify struggling cohorts and cognitive bottlenecks in real time.
+                Features an adaptive 3-tier exam simulator using Fisher-Yates zero-repetition randomization, live Socratic hints,
+                and a 4-tier formative autograder that evaluates student coursework, generates structured revision roadmaps, and
+                tracks longitudinal cognitive progress.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionColumns>
         </ProjectSection>
 
         <ProjectSection light>
-          <ProjectSectionContent>
-            <ProjectTextRow>
-              <ProjectSectionHeading>Trilingual &amp; Dual-Curriculum Architecture</ProjectSectionHeading>
-              <ProjectSectionText>
-                Engineered with comprehensive internationalization, the platform supports seamless language switching
-                between <strong>English, Urdu, and Sindhi</strong> with customized RTL script typography. It is fully
-                aligned with Cambridge CAIE (O/A Levels) standards and Sindh BISE / FBISE matriculation and intermediate syllabi.
-              </ProjectSectionText>
-            </ProjectTextRow>
-          </ProjectSectionContent>
-        </ProjectSection>
-
-        <ProjectSection>
           <ProjectTextRow>
             <ProjectSectionHeading>Tech Stack</ProjectSectionHeading>
             <ProjectSectionText>
-              Next.js 15 · React 19 · TypeScript · Google Gemini 1.5 Flash · DeepSeek-R1 · OpenAI GPT-4o · FastAPI · PostgreSQL · Tailwind CSS · KaTeX · Vercel
+              Next.js 15 · React 19 · TypeScript · Tailwind CSS · Google Gemini 1.5 Flash · DeepSeek-R1 · PostgreSQL · FastAPI · KaTeX · Vercel
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
