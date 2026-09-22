@@ -132,7 +132,7 @@ export const Home = () => {
         description="Official educational management platform and smart AI campus for Sindh School of Technology (SST & SST Nexus). Features comprehensive trilingual education in English, Urdu, and Sindhi, interactive admissions, automated grading analytics, live robotics lab stream, and dual Cambridge CAIE & Sindh BISE accreditation."
         buttonText="Live Demo"
         buttonLink="https://fyp-f8xk.vercel.app/"
-        repoLink="https://github.com/mhusman123"
+        repoLink="https://github.com/mhusman123/FYP"
         detailsLink="/projects/fyp"
         model={{
           type: 'screenshot',

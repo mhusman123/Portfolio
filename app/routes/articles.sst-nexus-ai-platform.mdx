@@ -1,0 +1,117 @@
+---
+title: 'Building SST Nexus: Transforming My FYP into an Enterprise-Grade AI Educational & Socratic Exam Platform'
+abstract: How I expanded my University Final Year Project (FYP) into a licensable, full-stack educational intelligence platform (SST Nexus) with multi-model Socratic AI tutoring, zero-repetition timed exam simulation, 4-tier rubric autograding, and trilingual immersion across English, Urdu, and Sindhi.
+date: '2026-09-22'
+banner: /static/sst-nexus-banner.jpg
+---
+
+## Evolution: From Final Year Project to Full-Scale Educational Platform
+
+What began as my Final Year Research Project (FYP) at the University of Sindh, Jamshoro — investigating neuro-symbolic automated grading and longitudinal error quotients — has evolved into **SST Nexus / Sindh School of Technology Educational Platform**, a comprehensive, enterprise-grade AI learning intelligence system.
+
+Modern educational institutions often face an unsustainable trade-off: expensive, fragmented SaaS subscriptions that cost tens of thousands of dollars per year, or rigid legacy portals that offer only binary pass/fail grading without pedagogical insight. 
+
+I engineered SST Nexus to bridge this divide: delivering world-class AI tutoring, automated rubric grading, adaptive exam generation, and administrative management at a fraction of the cost, purpose-built for schools and universities.
+
+> **Live Deployment:** [https://fyp-f8xk.vercel.app/](https://fyp-f8xk.vercel.app/)  
+> **Source Repository:** [https://github.com/mhusman123/FYP](https://github.com/mhusman123/FYP)
+
+---
+
+## 1. Multi-Model Socratic AI Tutoring Engine
+
+The core educational philosophy of SST Nexus is **Socratic guidance with zero spoilers**. Rather than functioning as a direct answer engine, the AI tutor assesses a student's initial query, breaks the problem down into logical checkpoints, and asks guiding questions that train students to reach the correct solution independently.
+
+![Socratic AI Tutor guiding a student through step-by-step calculus with LaTeX formula rendering](/static/sst-ai-tutor.jpg)
+
+### Key Engineering Features:
+- **Multi-Model LLM Gateway:** An interchangeable reasoning core leveraging **Google Gemini 1.5 Flash** (for sub-800ms streaming latency), **DeepSeek-R1** (for step-by-step mathematical proofs and STEM reasoning), and **OpenAI GPT-4o**.
+- **Mathematical & Scientific Typesetting:** Built-in KaTeX / LaTeX rendering for complex calculus, algebra, and physics equations, paired with biochemical pathway diagrams.
+- **Zero-Spoil Pedagogical Guardrails:** Context-aware system prompts prevent the model from revealing answers prematurely, even when explicitly pressured by students.
+- **Full Curriculum Support:** Active modules for Mathematics, Physics, Chemistry, Biology, Computer Science, and General Humanities.
+
+---
+
+## 2. AI Quiz Arena & Adaptive Timed Exam Simulator
+
+To prepare students for competitive examinations (Cambridge CAIE O/A Levels, Sindh BISE Matric/Inter, MDCAT, and ECAT), SST Nexus features an interactive **AI Quiz Arena**.
+
+![Adaptive Timed Exam Simulation Arena with active countdown and topic breakdown](/static/sst-quiz-arena.jpg)
+
+### Key Features & Algorithms:
+- **Fisher-Yates Zero-Repetition Randomization:** Guarantees that every exam session draws a unique, balanced distribution of questions without repetition.
+- **3-Tier Exam Presets:**
+  - **Sprint:** 20 questions in 10 minutes
+  - **Standard:** 35 questions in 17 minutes
+  - **Comprehensive:** 50 questions in 25 minutes
+- **In-Quiz Socratic Hints:** Students can trigger non-spoiling conceptual hints during practice mode without invalidating their attempt score.
+- **Diagnostic Mastery Telemetry:** Instant topic-level performance scorecards highlighting strong competencies and specific knowledge gaps.
+
+---
+
+## 3. 4-Tier Formative Rubric Autograder & Teacher Copilot
+
+Grading open-ended assignments and code submissions manually across hundreds of students is exhausting and prone to variance. SST Nexus features a multi-dimensional rubric autograder that evaluates submissions objectively.
+
+![Teacher Autograding Dashboard with 4-tier rubric evaluation and revision roadmaps](/static/sst-autograder.jpg)
+
+### Evaluation Dimensions:
+1. **Conceptual Understanding:** Depth and accuracy of core principles.
+2. **Technical & Analytical Depth:** Rigor of derivations, proofs, and algorithmic efficiency.
+3. **Critical Thinking & Problem Solving:** Originality of approach and edge-case handling.
+4. **Presentation & Clarity:** Logical flow, formatting, and structural cohesion.
+
+Each student receives a personalized **Revision Roadmap** detailing exact areas for iterative improvement before final grading.
+
+---
+
+## 4. Originality & Semantic Plagiarism Engine
+
+Academic integrity is protected through a custom sentence-level similarity indexing engine:
+- **Semantic Text Embeddings:** Computes high-dimensional vector embeddings to detect paraphrased content and cross-student collusion.
+- **AI Synthesis Pattern Detection:** Flags unedited LLM-generated text patterns.
+- **Interactive Similarity Heatmap:** Provides educators with visual percentage breakdowns and highlighted source matches for rapid verification.
+
+---
+
+## 5. Gamified Economics, Streaks & Merit Badges
+
+To maintain high student engagement and consistent daily practice, the platform incorporates behavioral game design principles:
+
+![Cohort Leaderboards, Active Study Streaks, and Verified Digital Merit Badges](/static/sst-gamification.jpg)
+
+- **Daily Study Streaks:** Visual fire-streak counters incentivize daily problem-solving.
+- **XP & Merit Economy:** Points awarded for completing problem sets, helping peers, and mastering difficult concepts.
+- **Dynamic Cohort Leaderboards:** Real-time class, grade, and campus rankings.
+
+---
+
+## 6. Trilingual Immersion & Dual-Curriculum Management
+
+A foundational breakthrough in SST Nexus is its culturally rooted, **trilingual architecture**:
+- **Trilingual Fluency:** Complete localization across **English, Urdu (اردو), and Sindhi (سنڌي)** with optimized Right-to-Left (RTL) script rendering.
+- **Dual-Curriculum Support:** Simultaneously manages **Cambridge CAIE (O/A Levels)** alongside **Sindh BISE / FBISE** Matriculation and Intermediate syllabi.
+- **Campus Portals:** Unified digital hub for Sindh School of Technology (SST) Early Years, Primary, Secondary, and the **SST Nexus Sixth Form Campus**.
+
+---
+
+## Technical Stack & Architecture
+
+```
+Frontend:       Next.js 15 (App Router), React 19, TypeScript, Tailwind CSS, Framer Motion
+AI Reasoning:   Google Gemini 1.5 Flash, DeepSeek-R1, OpenAI GPT-4o
+Math Engine:    KaTeX & MathJax LaTeX Rendering
+Backend APIs:   FastAPI (Python) & Next.js Server Actions
+Database:       PostgreSQL (Supabase) with pgvector for Semantic Search
+Deployment:     Vercel Edge Network
+```
+
+---
+
+## Summary & Future Roadmap
+
+Transforming my Final Year Project into SST Nexus proved that cutting-edge AI educational tools do not need to be locked behind expensive enterprise paywalls. 
+
+By combining **multi-model Socratic AI tutoring**, **adaptive exam simulations**, **formative autograding**, and **trilingual localization**, SST Nexus provides schools across Sindh and Pakistan with a modern, globally competitive educational platform.
+
+Explore the live platform at [https://fyp-f8xk.vercel.app/](https://fyp-f8xk.vercel.app/) or view the code at [https://github.com/mhusman123/FYP](https://github.com/mhusman123/FYP).
