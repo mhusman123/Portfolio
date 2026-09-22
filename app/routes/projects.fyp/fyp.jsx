@@ -16,14 +16,14 @@ import { media } from '~/utils/style';
 import { baseMeta } from '~/utils/meta';
 import styles from './fyp.module.css';
 
-const title = 'Sindh School of Technology (SST Nexus) — Trilingual Educational Platform & Smart AI Campus';
+const title = 'AI Powered Education Platform (EduPlatform AI) — Enterprise-Grade AI Learning & Autograding Infrastructure';
 const description =
-  'A premier digital educational management system, smart AI campus platform, and trilingual learning environment developed as my Final Year Project (FYP) for Sindh School of Technology (SST) and the University of Sindh, Jamshoro.';
+  'An all-in-one licensable B2B academic intelligence ecosystem combining an AI Socratic tutor, 4-tier formative autograding, adaptive 3-tier exam simulation with Fisher-Yates zero-collision randomization, and deep semantic plagiarism detection across 72+ compiled routes.';
 const roles = [
-  'Full-Stack & AI Engineering',
-  'Trilingual Architecture (English • Urdu • Sindhi)',
-  'Multi-Model AI Gateway (Gemini 1.5 / DeepSeek-R1 / GPT-4o)',
-  'Dual-Curriculum Integration (Cambridge CAIE & Sindh BISE)',
+  'Lead Full-Stack & AI Systems Architect',
+  'Multi-Model Reasoning Gateway (Gemini 1.5 Flash • DeepSeek-R1 • GPT-4o)',
+  'Adaptive Timed Exam Simulator (20 / 35 / 50 Question Presets)',
+  '4-Tier Formative Rubric Autograder & Plagiarism Engine',
 ];
 
 export const meta = () => {
@@ -46,7 +46,7 @@ export const FYP = () => {
               src={fypTexture}
               width={1440}
               height={900}
-              alt="Sindh School of Technology (SST Nexus) Educational Platform screenshot"
+              alt="AI Powered Education Platform (EduPlatform AI) screenshot"
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ProjectSectionContent>
@@ -54,17 +54,17 @@ export const FYP = () => {
 
         <ProjectSection>
           <ProjectTextRow>
-            <ProjectSectionHeading>The Vision &amp; Purpose</ProjectSectionHeading>
+            <ProjectSectionHeading>Executive Overview &amp; Institutional Adaptability</ProjectSectionHeading>
             <ProjectSectionText>
-              Modern educational institutions across Sindh, Pakistan require unified digital platforms that seamlessly
-              connect students, teachers, administrators, and parents. <strong>Sindh School of Technology (SST)</strong>
-              and its Sixth Form branch, <strong>SST Nexus</strong>, demanded a system that pairs world-class Cambridge CAIE
-              and Sindh BISE curriculum management with a culturally rooted, <strong>trilingual learning experience in English,
-              Urdu, and Sindhi</strong>.
+              <strong>EduPlatform AI (AI Powered Education Platform)</strong> is an enterprise-grade, licensable B2B academic
+              intelligence infrastructure engineered for primary, secondary, college, and higher-education institutions. It provides
+              schools with world-class AI learning capabilities without prohibitive enterprise licensing costs.
             </ProjectSectionText>
             <ProjectSectionText>
-              This platform serves as a complete digital institution: uniting online admissions, fee workflows, live AI lab
-              and robotics streams, socratic AI tutoring, and automated rubric evaluations under one modern interface.
+              The platform is completely curriculum-agnostic: seamlessly configurable for Cambridge CAIE (O/A Levels),
+              International Baccalaureate (IB), Edexcel, American AP, and national/provincial secondary examination boards.
+              From foundational exercises for Grade 1 pupils up to algorithmic complexity and research synthesis for university
+              scholars, the ecosystem covers 72+ production-compiled routes.
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
@@ -72,15 +72,17 @@ export const FYP = () => {
         <ProjectSection light>
           <ProjectSectionContent>
             <ProjectTextRow>
-              <ProjectSectionHeading>Trilingual &amp; Dual-Curriculum Architecture</ProjectSectionHeading>
+              <ProjectSectionHeading>Multi-Model AI Gateway &amp; Socratic Tutor</ProjectSectionHeading>
               <ProjectSectionText>
-                Built with a native internationalization engine, the platform enables effortless language switching across
-                <strong> English, Urdu (اردو), and Sindhi (سنڌي)</strong> with customized Right-to-Left (RTL) typography.
+                At the core of the platform is an intelligent multi-model gateway dynamically routing prompts between
+                <strong> Google Gemini 1.5 Flash</strong> (sub-800ms streaming latency), <strong>DeepSeek-R1</strong>
+                (advanced STEM &amp; mathematical reasoning), and <strong>OpenAI GPT-4o</strong> (humanities &amp; autograding).
               </ProjectSectionText>
               <ProjectSectionText>
-                It facilitates dual-curriculum certification for Cambridge CAIE (O/A Levels) alongside Sindh BISE / FBISE
-                Matriculation and Intermediate boards, allowing students and educators to access syllabi, timetables, and
-                diagnostic scorecards in their chosen language.
+                The <strong>Socratic AI Tutor (/ai-tutor)</strong> enforces strict zero-spoil pedagogical guardrails. Instead of
+                delivering direct answers, it breaks complex problems down into step-by-step checkpoints, rendering full
+                <strong> KaTeX / LaTeX mathematical typesetting</strong>, chemical equations, and multi-language code snippets with
+                syntax highlighting.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionContent>
@@ -89,19 +91,28 @@ export const FYP = () => {
         <ProjectSection>
           <ProjectSectionColumns>
             <ProjectTextRow>
-              <ProjectSectionHeading>Smart AI Classrooms &amp; Socratic Tutor</ProjectSectionHeading>
+              <ProjectSectionHeading>Adaptive Timed Quiz Arena (/quiz-generator)</ProjectSectionHeading>
               <ProjectSectionText>
-                Integrated with smart computer science classrooms and robotics centers, the platform incorporates an AI reasoning
-                gateway (powered by <strong>Google Gemini 1.5 Flash</strong> and <strong>DeepSeek-R1</strong>) with strict zero-spoil
-                pedagogical guardrails and KaTeX / LaTeX formula rendering, guiding students through complex STEM concepts.
+                Designed for high-stakes exam preparation, the arena provides 3-tier timed presets:
+                <strong> Quick Sprint (20 Questions / 10m)</strong>, <strong>Standard Assessment (35 Questions / 17m)</strong>,
+                and <strong>Comprehensive Exam (50 Questions / 25m)</strong>.
+              </ProjectSectionText>
+              <ProjectSectionText>
+                It utilizes the <strong>Fisher-Yates algorithmic shuffle</strong> to guarantee zero-collision randomization across sessions,
+                provides real-time in-quiz Socratic hints without score penalties, and generates instant diagnostic scorecards across topic mastery,
+                answering speed, and accuracy.
               </ProjectSectionText>
             </ProjectTextRow>
             <ProjectTextRow>
-              <ProjectSectionHeading>AI Quiz Arena &amp; Autograding Copilot</ProjectSectionHeading>
+              <ProjectSectionHeading>Formative Rubric Autograder &amp; Plagiarism Engine</ProjectSectionHeading>
               <ProjectSectionText>
-                Features an adaptive 3-tier exam simulator using Fisher-Yates zero-repetition randomization, live Socratic hints,
-                and a 4-tier formative autograder that evaluates student coursework, generates structured revision roadmaps, and
-                tracks longitudinal cognitive progress.
+                The <strong>Rubric Autograder (/autograding)</strong> evaluates essays and code across a 4-tier weighted standard:
+                Conceptual Understanding (40%), Technical Depth (30%), Critical Thinking (20%), and Presentation (10%), generating
+                personalized revision roadmaps alongside a 1-click teacher verification queue.
+              </ProjectSectionText>
+              <ProjectSectionText>
+                The <strong>Originality Engine (/plagiarism)</strong> executes semantic and syntactic similarity indexing with
+                sentence-level heatmaps under a strict <strong>zero-data-retention policy</strong> — student work is never leaked or stored in public LLMs.
               </ProjectSectionText>
             </ProjectTextRow>
           </ProjectSectionColumns>
@@ -109,9 +120,20 @@ export const FYP = () => {
 
         <ProjectSection light>
           <ProjectTextRow>
-            <ProjectSectionHeading>Tech Stack</ProjectSectionHeading>
+            <ProjectSectionHeading>Gamified Merit Economy &amp; Institutional Portals</ProjectSectionHeading>
             <ProjectSectionText>
-              Next.js 15 · React 19 · TypeScript · Tailwind CSS · Google Gemini 1.5 Flash · DeepSeek-R1 · PostgreSQL · FastAPI · KaTeX · Vercel
+              Fosters continuous academic discipline through a gamified economy featuring daily study streak multipliers with
+              anti-cheat validation, XP progression, and verifiable merit badges (<em>STEM Pioneer</em>, <em>Calculus Master</em>, <em>Code Artisan</em>).
+              Educators gain real-time cohort mastery telemetry, automated at-risk intervention flags, and formalized compassionate grade request queues.
+            </ProjectSectionText>
+          </ProjectTextRow>
+        </ProjectSection>
+
+        <ProjectSection>
+          <ProjectTextRow>
+            <ProjectSectionHeading>Technology Stack &amp; Topology</ProjectSectionHeading>
+            <ProjectSectionText>
+              Next.js 15 (App Router) · React 19 · TypeScript · Tailwind CSS · ShadCN UI · Prisma ORM 6.16 · PostgreSQL / SQLite · Google Gemini 1.5 Flash · DeepSeek-R1 · OpenAI GPT-4o-mini · NextAuth.js · KaTeX · Vercel
             </ProjectSectionText>
           </ProjectTextRow>
         </ProjectSection>
