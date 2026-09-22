@@ -125,11 +125,11 @@ export const Home = () => {
         sectionRef={projectOne}
         visible={visibleSections.includes(projectOne.current)}
         index={1}
-        category="AI & EdTech / Intelligence Platform"
-        metrics={['Trilingual (EN / UR / SD)', 'Cambridge CAIE & BISE', 'Smart AI Labs & Campus']}
-        tags={['Next.js 15', 'TypeScript', 'Gemini 1.5', 'DeepSeek-R1', 'FastAPI', 'PostgreSQL', 'Tailwind CSS']}
+        category="AI & EdTech Platform"
+        metrics={['Trilingual (EN / UR / SD)', 'Cambridge CAIE & Sindh BISE', 'Smart AI & Robotics Labs']}
+        tags={['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS', 'FastAPI', 'PostgreSQL', 'AI Autograding']}
         title="Sindh School of Technology (SST Nexus) — Trilingual Educational Platform & Smart AI Campus"
-        description="Premier educational management system and smart AI campus for Sindh School of Technology (SST). Features comprehensive trilingual immersion in English, Urdu, and Sindhi, interactive admissions, AI autograding, live robotics lab stream, and dual Cambridge CAIE & Sindh BISE curriculum management."
+        description="Official educational management platform and smart AI campus for Sindh School of Technology (SST & SST Nexus). Features comprehensive trilingual education in English, Urdu, and Sindhi, interactive admissions, automated grading analytics, live robotics lab stream, and dual Cambridge CAIE & Sindh BISE accreditation."
         buttonText="Live Demo"
         buttonLink="https://fyp-f8xk.vercel.app/"
         repoLink="https://github.com/mhusman123"
@@ -137,7 +137,7 @@ export const Home = () => {
         model={{
           type: 'screenshot',
           src: fypTexture,
-          alt: 'Sindh School of Technology (SST Nexus) Educational Platform screenshot',
+          alt: 'Sindh School of Technology (SST Nexus) Trilingual Educational Platform screenshot',
         }}
       />
       <ProjectSummary
