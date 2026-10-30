@@ -5,6 +5,7 @@ import bankingTexture from '~/assets/banking.png';
 import bakeryTexture from '~/assets/bakery.png';
 import chronopulseTexture from '~/assets/chronopulse.png';
 import storeTexture from '~/assets/store.png';
+import workflowTexture from '~/assets/workflow.svg';
 import { Footer } from '~/components/footer';
 import { baseMeta } from '~/utils/meta';
 import { Intro } from './intro';
@@ -53,6 +54,7 @@ export const Home = () => {
   const projectFive = useRef();
   const projectSix = useRef();
   const projectSeven = useRef();
+  const projectEight = useRef();
   const experience = useRef();
   const details = useRef();
 
@@ -66,6 +68,7 @@ export const Home = () => {
       projectFive,
       projectSix,
       projectSeven,
+      projectEight,
       experience,
       details,
     ];
@@ -166,6 +169,26 @@ export const Home = () => {
         sectionRef={projectThree}
         visible={visibleSections.includes(projectThree.current)}
         index={3}
+        category="Agentic AI / LangGraph"
+        metrics={['Stateful Multi-Turn Memory', 'PDF / RAG Workspace', 'Streaming Groq Responses']}
+        tags={['Python', 'LangGraph', 'Streamlit', 'Groq', 'SQLite', 'MCP']}
+        title="Cortex AI — Conversational Agent with LangGraph &amp; Groq"
+        description="A ChatGPT-style conversational agent with persistent threads, streamed responses, PDF/RAG support, MCP tools, and a unified Streamlit workspace."
+        buttonText="View on GitHub"
+        buttonLink="https://github.com/mhusman123/Workflow"
+        repoLink="https://github.com/mhusman123/Workflow"
+        githubOnly
+        model={{
+          type: 'screenshot',
+          src: workflowTexture,
+          alt: 'Cortex AI conversational agent interface preview',
+        }}
+      />
+      <ProjectSummary
+        id="project-4"
+        sectionRef={projectFour}
+        visible={visibleSections.includes(projectFour.current)}
+        index={4}
         category="Machine Learning"
         metrics={['80% Test Accuracy', 'Random Forest Classifier', 'Streamlit UI']}
         tags={['Scikit-Learn', 'FastAPI', 'Streamlit', 'Pandas', 'EDA', 'Python']}
@@ -192,11 +215,11 @@ export const Home = () => {
         </p>
       </div>
       <ProjectSummary
-        id="project-4"
+        id="project-5"
         alternate
-        sectionRef={projectFour}
-        visible={visibleSections.includes(projectFour.current)}
-        index={4}
+        sectionRef={projectFive}
+        visible={visibleSections.includes(projectFive.current)}
+        index={5}
         category="Fintech / Full-Stack"
         metrics={['Clean Architecture + CQRS', '.NET 10 + React 18', 'PayFast & 1-Link Sandbox']}
         tags={['React 18', '.NET 10', 'Tailwind CSS v4', 'PostgreSQL', 'CQRS', 'PayFast']}
@@ -212,10 +235,10 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-5"
-        sectionRef={projectFive}
-        visible={visibleSections.includes(projectFive.current)}
-        index={5}
+        id="project-6"
+        sectionRef={projectSix}
+        visible={visibleSections.includes(projectSix.current)}
+        index={6}
         category="E-Commerce / Full-Stack"
         metrics={['Next.js 15 App Router', 'Zustand Cart Engine', 'Fuse.js Instant Search']}
         tags={['Next.js 15', 'TypeScript', 'Tailwind CSS v4', 'Zustand', 'Framer Motion', 'Fuse.js']}
@@ -231,11 +254,11 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-6"
+        id="project-7"
         alternate
-        sectionRef={projectSix}
-        visible={visibleSections.includes(projectSix.current)}
-        index={6}
+        sectionRef={projectSeven}
+        visible={visibleSections.includes(projectSeven.current)}
+        index={7}
         category="Web Application"
         metrics={['Real-Time Chrono Ticker', '9-Planet Cosmic Age', 'Lifetime Bio-Vitals Matrix']}
         tags={['React 19', 'Vite', 'Tailwind CSS v4', 'Canvas Confetti', 'Glassmorphism']}
@@ -251,10 +274,10 @@ export const Home = () => {
         }}
       />
       <ProjectSummary
-        id="project-7"
-        sectionRef={projectSeven}
-        visible={visibleSections.includes(projectSeven.current)}
-        index={7}
+        id="project-8"
+        sectionRef={projectEight}
+        visible={visibleSections.includes(projectEight.current)}
+        index={8}
         category="Full-Stack Web App"
         metrics={['PayFast Gateway', 'MERN Architecture', 'Responsive UI']}
         tags={['React', 'Node.js', 'Express', 'MongoDB', 'PayFast', 'REST API']}

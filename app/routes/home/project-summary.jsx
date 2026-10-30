@@ -34,6 +34,7 @@ export function ProjectSummary({
   tags,
   metrics,
   alternate,
+  githubOnly,
   ...rest
 }) {
   const [focused, setFocused] = useState(false);
@@ -120,15 +121,17 @@ export function ProjectSummary({
           </div>
         )}
         <div className={styles.button} data-visible={visible}>
-          <Button
-            iconHoverShift
-            href={buttonLink}
-            iconEnd="arrow-right"
-            target={buttonLink.startsWith('http') ? '_blank' : undefined}
-            rel={buttonLink.startsWith('http') ? 'noopener noreferrer' : undefined}
-          >
-            {buttonText}
-          </Button>
+          {!githubOnly && (
+            <Button
+              iconHoverShift
+              href={buttonLink}
+              iconEnd="arrow-right"
+              target={buttonLink.startsWith('http') ? '_blank' : undefined}
+              rel={buttonLink.startsWith('http') ? 'noopener noreferrer' : undefined}
+            >
+              {buttonText}
+            </Button>
+          )}
           {repoLink && (
             <Button
               secondary
@@ -138,7 +141,7 @@ export function ProjectSummary({
               rel="noopener noreferrer"
               className={styles.repoButton}
             >
-              View Code
+              {githubOnly ? 'View on GitHub' : 'View Code'}
             </Button>
           )}
           {detailsLink && (
