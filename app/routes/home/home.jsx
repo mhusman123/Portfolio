@@ -178,6 +178,7 @@ export const Home = () => {
         buttonLink="https://github.com/mhusman123/Workflow"
         repoLink="https://github.com/mhusman123/Workflow"
         githubOnly
+        detailsLink="/projects/workflow"
         model={{
           type: 'screenshot',
           src: workflowTexture,
